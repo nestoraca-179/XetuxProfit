@@ -1,0 +1,14 @@
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\XetuxProfit.exe.config
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\XetuxProfit.exe
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\XetuxProfit.pdb
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\EntityFramework.dll
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\EntityFramework.SqlServer.dll
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\Newtonsoft.Json.dll
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\EntityFramework.xml
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\EntityFramework.SqlServer.xml
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Debug\Newtonsoft.Json.xml
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Debug\XetuxProfit.csproj.CoreCompileInputs.cache
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Debug\XetuxProfit.csproj.CopyComplete
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Debug\XetuxProfit.exe
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Debug\XetuxProfit.pdb
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Debug\XetuxProfit.csproj.AssemblyReference.cache

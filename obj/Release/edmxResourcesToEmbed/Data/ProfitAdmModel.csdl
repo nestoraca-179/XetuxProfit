@@ -1,0 +1,1479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProfitAdmModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ProfitAdmEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="pInsertarArticulo" ReturnType="Collection(ProfitAdmModel.pInsertarArticulo_Result)">
+      <Parameter Name="sCo_Art" Mode="In" Type="String" />
+      <Parameter Name="sdFecha_Reg" Mode="In" Type="DateTime" />
+      <Parameter Name="sArt_Des" Mode="In" Type="String" />
+      <Parameter Name="sTipo" Mode="In" Type="String" />
+      <Parameter Name="bAnulado" Mode="In" Type="Boolean" />
+      <Parameter Name="sdFecha_Inac" Mode="In" Type="DateTime" />
+      <Parameter Name="sCo_Lin" Mode="In" Type="String" />
+      <Parameter Name="sCo_Subl" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cat" Mode="In" Type="String" />
+      <Parameter Name="sCo_Color" Mode="In" Type="String" />
+      <Parameter Name="sCo_Ubicacion" Mode="In" Type="String" />
+      <Parameter Name="sItem" Mode="In" Type="String" />
+      <Parameter Name="sModelo" Mode="In" Type="String" />
+      <Parameter Name="sRef" Mode="In" Type="String" />
+      <Parameter Name="bGenerico" Mode="In" Type="Boolean" />
+      <Parameter Name="bManeja_Serial" Mode="In" Type="Boolean" />
+      <Parameter Name="bManeja_Lote" Mode="In" Type="Boolean" />
+      <Parameter Name="bManeja_Lote_Venc" Mode="In" Type="Boolean" />
+      <Parameter Name="deMargen_Min" Mode="In" Type="Decimal" />
+      <Parameter Name="deMargen_Max" Mode="In" Type="Decimal" />
+      <Parameter Name="sTipo_Imp" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp2" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp3" Mode="In" Type="String" />
+      <Parameter Name="sCo_Reten" Mode="In" Type="String" />
+      <Parameter Name="sCod_Proc" Mode="In" Type="String" />
+      <Parameter Name="sGarantia" Mode="In" Type="String" />
+      <Parameter Name="deVolumen" Mode="In" Type="Decimal" />
+      <Parameter Name="dePeso" Mode="In" Type="Decimal" />
+      <Parameter Name="deStock_Min" Mode="In" Type="Decimal" />
+      <Parameter Name="deStock_Max" Mode="In" Type="Decimal" />
+      <Parameter Name="deStock_Pedido" Mode="In" Type="Decimal" />
+      <Parameter Name="iRelac_Unidad" Mode="In" Type="Int32" />
+      <Parameter Name="dePunt_Ven" Mode="In" Type="Decimal" />
+      <Parameter Name="dePunt_Cli" Mode="In" Type="Decimal" />
+      <Parameter Name="deLic_Mon_Ilc" Mode="In" Type="Decimal" />
+      <Parameter Name="deLic_Capacidad" Mode="In" Type="Decimal" />
+      <Parameter Name="deLic_Grado_Al" Mode="In" Type="Decimal" />
+      <Parameter Name="sLic_Tipo" Mode="In" Type="String" />
+      <Parameter Name="bPrec_Om" Mode="In" Type="Boolean" />
+      <Parameter Name="sComentario" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Cos" Mode="In" Type="String" />
+      <Parameter Name="dePorc_Margen_Minimo" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Margen_Maximo" Mode="In" Type="Decimal" />
+      <Parameter Name="deMont_Comi" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Arancel" Mode="In" Type="Decimal" />
+      <Parameter Name="sI_Art_Des" Mode="In" Type="String" />
+      <Parameter Name="sDis_Cen" Mode="In" Type="String" />
+      <Parameter Name="sReten_Iva_Tercero" Mode="In" Type="String" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pInsertarCliente" ReturnType="Collection(ProfitAdmModel.pInsertarCliente_Result)">
+      <Parameter Name="sCo_Cli" Mode="In" Type="String" />
+      <Parameter Name="sLogin" Mode="In" Type="String" />
+      <Parameter Name="sPassword" Mode="In" Type="String" />
+      <Parameter Name="sSalesTax" Mode="In" Type="String" />
+      <Parameter Name="sCli_Des" Mode="In" Type="String" />
+      <Parameter Name="sCo_seg" Mode="In" Type="String" />
+      <Parameter Name="sCo_zon" Mode="In" Type="String" />
+      <Parameter Name="sCo_Ven" Mode="In" Type="String" />
+      <Parameter Name="sEstado" Mode="In" Type="String" />
+      <Parameter Name="bInactivo" Mode="In" Type="Boolean" />
+      <Parameter Name="bValido" Mode="In" Type="Boolean" />
+      <Parameter Name="bSinCredito" Mode="In" Type="Boolean" />
+      <Parameter Name="bLunes" Mode="In" Type="Boolean" />
+      <Parameter Name="bMartes" Mode="In" Type="Boolean" />
+      <Parameter Name="bMiercoles" Mode="In" Type="Boolean" />
+      <Parameter Name="bJueves" Mode="In" Type="Boolean" />
+      <Parameter Name="bViernes" Mode="In" Type="Boolean" />
+      <Parameter Name="bSabado" Mode="In" Type="Boolean" />
+      <Parameter Name="bDomingo" Mode="In" Type="Boolean" />
+      <Parameter Name="sDirec1" Mode="In" Type="String" />
+      <Parameter Name="sDirec2" Mode="In" Type="String" />
+      <Parameter Name="sDir_Ent2" Mode="In" Type="String" />
+      <Parameter Name="sHorar_Caja" Mode="In" Type="String" />
+      <Parameter Name="sFrecu_Vist" Mode="In" Type="String" />
+      <Parameter Name="sTelefonos" Mode="In" Type="String" />
+      <Parameter Name="sFax" Mode="In" Type="String" />
+      <Parameter Name="sRespons" Mode="In" Type="String" />
+      <Parameter Name="sdFecha_reg" Mode="In" Type="DateTime" />
+      <Parameter Name="sTip_Cli" Mode="In" Type="String" />
+      <Parameter Name="sSerialP" Mode="In" Type="String" />
+      <Parameter Name="iPuntaje" Mode="In" Type="Int32" />
+      <Parameter Name="iId" Mode="In" Type="Int32" />
+      <Parameter Name="deMont_cre" Mode="In" Type="Decimal" />
+      <Parameter Name="sCo_mone" Mode="In" Type="String" />
+      <Parameter Name="sCond_Pag" Mode="In" Type="String" />
+      <Parameter Name="iPlaz_pag" Mode="In" Type="Int32" />
+      <Parameter Name="deDesc_ppago" Mode="In" Type="Decimal" />
+      <Parameter Name="deDesc_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="sTipo_Iva" Mode="In" Type="String" />
+      <Parameter Name="deIva" Mode="In" Type="Decimal" />
+      <Parameter Name="sRif" Mode="In" Type="String" />
+      <Parameter Name="bContrib" Mode="In" Type="Boolean" />
+      <Parameter Name="sDis_cen" Mode="In" Type="String" />
+      <Parameter Name="sNit" Mode="In" Type="String" />
+      <Parameter Name="sEmail" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cta_Ingr_Egr" Mode="In" Type="String" />
+      <Parameter Name="sComentario" Mode="In" Type="String" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="bJuridico" Mode="In" Type="Boolean" />
+      <Parameter Name="iTipo_Adi" Mode="In" Type="Int32" />
+      <Parameter Name="sMatriz" Mode="In" Type="String" />
+      <Parameter Name="sCo_Tab" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Per" Mode="In" Type="String" />
+      <Parameter Name="sCo_pais" Mode="In" Type="String" />
+      <Parameter Name="sCiudad" Mode="In" Type="String" />
+      <Parameter Name="sZip" Mode="In" Type="String" />
+      <Parameter Name="sWebSite" Mode="In" Type="String" />
+      <Parameter Name="bContribu_E" Mode="In" Type="Boolean" />
+      <Parameter Name="bRete_Regis_Doc" Mode="In" Type="Boolean" />
+      <Parameter Name="dePorc_Esp" Mode="In" Type="Decimal" />
+      <Parameter Name="sN_cr" Mode="In" Type="String" />
+      <Parameter Name="sN_db" Mode="In" Type="String" />
+      <Parameter Name="sTComp" Mode="In" Type="String" />
+      <Parameter Name="sEmail_alterno" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pInsertarDocumentoVenta" ReturnType="Collection(ProfitAdmModel.pInsertarDocumentoVenta_Result)">
+      <Parameter Name="sCo_Tipo_Doc" Mode="In" Type="String" />
+      <Parameter Name="sNro_Doc" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cli" Mode="In" Type="String" />
+      <Parameter Name="sCo_Ven" Mode="In" Type="String" />
+      <Parameter Name="sCo_Mone" Mode="In" Type="String" />
+      <Parameter Name="sMov_Ban" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cta_Ingr_Egr" Mode="In" Type="String" />
+      <Parameter Name="deTasa" Mode="In" Type="Decimal" />
+      <Parameter Name="sObserva" Mode="In" Type="String" />
+      <Parameter Name="sdFec_Reg" Mode="In" Type="DateTime" />
+      <Parameter Name="sdFec_Emis" Mode="In" Type="DateTime" />
+      <Parameter Name="sdFec_Venc" Mode="In" Type="DateTime" />
+      <Parameter Name="bAnulado" Mode="In" Type="Boolean" />
+      <Parameter Name="bAut" Mode="In" Type="Boolean" />
+      <Parameter Name="bContrib" Mode="In" Type="Boolean" />
+      <Parameter Name="sDoc_Orig" Mode="In" Type="String" />
+      <Parameter Name="sNro_Orig" Mode="In" Type="String" />
+      <Parameter Name="sNro_Che" Mode="In" Type="String" />
+      <Parameter Name="deMonto_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="deSaldo" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Bruto" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Desc_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="sPorc_Desc_Glob" Mode="In" Type="String" />
+      <Parameter Name="sPorc_Reca" Mode="In" Type="String" />
+      <Parameter Name="deMonto_Reca" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Neto" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="sTipo_Imp" Mode="In" Type="String" />
+      <Parameter Name="iTipo_Origen" Mode="In" Type="Int32" />
+      <Parameter Name="dePorc_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="sNum_Comprobante" Mode="In" Type="String" />
+      <Parameter Name="sN_Control" Mode="In" Type="String" />
+      <Parameter Name="sDis_Cen" Mode="In" Type="String" />
+      <Parameter Name="deComis1" Mode="In" Type="Decimal" />
+      <Parameter Name="deComis2" Mode="In" Type="Decimal" />
+      <Parameter Name="deComis3" Mode="In" Type="Decimal" />
+      <Parameter Name="deComis4" Mode="In" Type="Decimal" />
+      <Parameter Name="deComis5" Mode="In" Type="Decimal" />
+      <Parameter Name="deComis6" Mode="In" Type="Decimal" />
+      <Parameter Name="deAdicional" Mode="In" Type="Decimal" />
+      <Parameter Name="sSalestax" Mode="In" Type="String" />
+      <Parameter Name="bVen_Ter" Mode="In" Type="Boolean" />
+      <Parameter Name="sImpfis" Mode="In" Type="String" />
+      <Parameter Name="sImpfisfac" Mode="In" Type="String" />
+      <Parameter Name="sImp_nro_z" Mode="In" Type="String" />
+      <Parameter Name="deOtros1" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros2" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros3" Mode="In" Type="Decimal" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pInsertarFacturaVenta" ReturnType="Collection(ProfitAdmModel.pInsertarFacturaVenta_Result)">
+      <Parameter Name="sDoc_Num" Mode="In" Type="String" />
+      <Parameter Name="sDescrip" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cli" Mode="In" Type="String" />
+      <Parameter Name="sCo_Tran" Mode="In" Type="String" />
+      <Parameter Name="sCo_Mone" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cta_Ingr_Egr" Mode="In" Type="String" />
+      <Parameter Name="sCo_Ven" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cond" Mode="In" Type="String" />
+      <Parameter Name="sdFec_Emis" Mode="In" Type="DateTime" />
+      <Parameter Name="sdFec_Venc" Mode="In" Type="DateTime" />
+      <Parameter Name="sdFec_Reg" Mode="In" Type="DateTime" />
+      <Parameter Name="bAnulado" Mode="In" Type="Boolean" />
+      <Parameter Name="sStatus" Mode="In" Type="String" />
+      <Parameter Name="deTasa" Mode="In" Type="Decimal" />
+      <Parameter Name="sN_Control" Mode="In" Type="String" />
+      <Parameter Name="sPorc_Desc_Glob" Mode="In" Type="String" />
+      <Parameter Name="deMonto_Desc_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="sPorc_Reca" Mode="In" Type="String" />
+      <Parameter Name="deMonto_Reca" Mode="In" Type="Decimal" />
+      <Parameter Name="deSaldo" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Bruto" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros1" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros2" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros3" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Neto" Mode="In" Type="Decimal" />
+      <Parameter Name="sDis_Cen" Mode="In" Type="String" />
+      <Parameter Name="sComentario" Mode="In" Type="String" />
+      <Parameter Name="sDir_Ent" Mode="In" Type="String" />
+      <Parameter Name="bContrib" Mode="In" Type="Boolean" />
+      <Parameter Name="bImpresa" Mode="In" Type="Boolean" />
+      <Parameter Name="sSalestax" Mode="In" Type="String" />
+      <Parameter Name="sImpfis" Mode="In" Type="String" />
+      <Parameter Name="sImpfisfac" Mode="In" Type="String" />
+      <Parameter Name="sImp_nro_z" Mode="In" Type="String" />
+      <Parameter Name="bVen_Ter" Mode="In" Type="Boolean" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="saArticulo" EntityType="ProfitAdmModel.saArticulo" />
+    <EntitySet Name="saCliente" EntityType="ProfitAdmModel.saCliente" />
+    <EntitySet Name="saDocumentoVenta" EntityType="ProfitAdmModel.saDocumentoVenta" />
+    <EntitySet Name="saFacturaVenta" EntityType="ProfitAdmModel.saFacturaVenta" />
+    <EntitySet Name="saFacturaVentaReng" EntityType="ProfitAdmModel.saFacturaVentaReng" />
+    <AssociationSet Name="FK_saCliente_saClienteCasaMatriz" Association="ProfitAdmModel.FK_saCliente_saClienteCasaMatriz">
+      <End Role="saCliente" EntitySet="saCliente" />
+      <End Role="saCliente1" EntitySet="saCliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saDocumentoVenta_saCliente" Association="ProfitAdmModel.FK_saDocumentoVenta_saCliente">
+      <End Role="saCliente" EntitySet="saCliente" />
+      <End Role="saDocumentoVenta" EntitySet="saDocumentoVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saFacturaVenta_saCliente" Association="ProfitAdmModel.FK_saFacturaVenta_saCliente">
+      <End Role="saCliente" EntitySet="saCliente" />
+      <End Role="saFacturaVenta" EntitySet="saFacturaVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saFacturaVentaReng_saFacturaVenta" Association="ProfitAdmModel.FK_saFacturaVentaReng_saFacturaVenta">
+      <End Role="saFacturaVenta" EntitySet="saFacturaVenta" />
+      <End Role="saFacturaVentaReng" EntitySet="saFacturaVentaReng" />
+    </AssociationSet>
+    <FunctionImport Name="pInsertarRenglonesFacturaVenta" ReturnType="Collection(ProfitAdmModel.pInsertarRenglonesFacturaVenta_Result)">
+      <Parameter Name="iReng_Num" Mode="In" Type="Int32" />
+      <Parameter Name="sDoc_Num" Mode="In" Type="String" />
+      <Parameter Name="sCo_Art" Mode="In" Type="String" />
+      <Parameter Name="sDes_Art" Mode="In" Type="String" />
+      <Parameter Name="sCo_Uni" Mode="In" Type="String" />
+      <Parameter Name="sSco_Uni" Mode="In" Type="String" />
+      <Parameter Name="sCo_Alma" Mode="In" Type="String" />
+      <Parameter Name="sCo_Precio" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp2" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp3" Mode="In" Type="String" />
+      <Parameter Name="deTotal_Art" Mode="In" Type="Decimal" />
+      <Parameter Name="deSTotal_Art" Mode="In" Type="Decimal" />
+      <Parameter Name="dePrec_Vta" Mode="In" Type="Decimal" />
+      <Parameter Name="sPorc_Desc" Mode="In" Type="String" />
+      <Parameter Name="deMonto_Desc" Mode="In" Type="Decimal" />
+      <Parameter Name="deReng_Neto" Mode="In" Type="Decimal" />
+      <Parameter Name="dePendiente" Mode="In" Type="Decimal" />
+      <Parameter Name="dePendiente2" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Desc_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_reca_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros1_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros2_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros3_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_imp_afec_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_imp2_afec_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_imp3_afec_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="sTipo_Doc" Mode="In" Type="String" />
+      <Parameter Name="gRowguid_Doc" Mode="In" Type="Guid" />
+      <Parameter Name="sNum_Doc" Mode="In" Type="String" />
+      <Parameter Name="dePorc_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Dev" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Dev" Mode="In" Type="Decimal" />
+      <Parameter Name="sComentario" Mode="In" Type="String" />
+      <Parameter Name="sDis_Cen" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sREVISADO" Mode="In" Type="String" />
+      <Parameter Name="sTRASNFE" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="pInsertarUnidadArticuloRenglon" ReturnType="Collection(ProfitAdmModel.pInsertarUnidadArticuloRenglon_Result)">
+      <Parameter Name="sCo_Art" Mode="In" Type="String" />
+      <Parameter Name="sCo_Uni" Mode="In" Type="String" />
+      <Parameter Name="iReng_Num" Mode="In" Type="Int32" />
+      <Parameter Name="bRelacion" Mode="In" Type="Boolean" />
+      <Parameter Name="deEquivalencia" Mode="In" Type="Decimal" />
+      <Parameter Name="bUso_Venta" Mode="In" Type="Boolean" />
+      <Parameter Name="bUso_Compra" Mode="In" Type="Boolean" />
+      <Parameter Name="bUni_Principal" Mode="In" Type="Boolean" />
+      <Parameter Name="bUso_Principal" Mode="In" Type="Boolean" />
+      <Parameter Name="bUni_Secundaria" Mode="In" Type="Boolean" />
+      <Parameter Name="bUso_Secundaria" Mode="In" Type="Boolean" />
+      <Parameter Name="bUso_NumDecimales" Mode="In" Type="Boolean" />
+      <Parameter Name="iNum_Decimales" Mode="In" Type="Int32" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="saUnidad" EntityType="ProfitAdmModel.saUnidad" />
+    <FunctionImport Name="pInsertarUnidad" ReturnType="Collection(ProfitAdmModel.pInsertarUnidad_Result)">
+      <Parameter Name="sCo_Uni" Mode="In" Type="String" />
+      <Parameter Name="sDes_Uni" Mode="In" Type="String" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="saDocumentoCompra" EntityType="ProfitAdmModel.saDocumentoCompra" />
+    <EntitySet Name="saFacturaCompra" EntityType="ProfitAdmModel.saFacturaCompra" />
+    <EntitySet Name="saFacturaCompraReng" EntityType="ProfitAdmModel.saFacturaCompraReng" />
+    <EntitySet Name="saProveedor" EntityType="ProfitAdmModel.saProveedor" />
+    <AssociationSet Name="FK_saArticulo_saProveedor" Association="ProfitAdmModel.FK_saArticulo_saProveedor">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saArticulo" EntitySet="saArticulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saDocumentoCompra_saProveedor" Association="ProfitAdmModel.FK_saDocumentoCompra_saProveedor">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saDocumentoCompra" EntitySet="saDocumentoCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saDocumentoCompra_saProveedorTercero" Association="ProfitAdmModel.FK_saDocumentoCompra_saProveedorTercero">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saDocumentoCompra" EntitySet="saDocumentoCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saFacturaCompra_saProveedor" Association="ProfitAdmModel.FK_saFacturaCompra_saProveedor">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saFacturaCompra" EntitySet="saFacturaCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saFacturaCompraReng_saFacturaCompra" Association="ProfitAdmModel.FK_saFacturaCompraReng_saFacturaCompra">
+      <End Role="saFacturaCompra" EntitySet="saFacturaCompra" />
+      <End Role="saFacturaCompraReng" EntitySet="saFacturaCompraReng" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saProveedor_saProveedorCasaMatriz" Association="ProfitAdmModel.FK_saProveedor_saProveedorCasaMatriz">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saProveedor1" EntitySet="saProveedor" />
+    </AssociationSet>
+    <FunctionImport Name="pInsertarDocumentoCompra" ReturnType="Collection(ProfitAdmModel.pInsertarDocumentoCompra_Result)">
+      <Parameter Name="sCo_Tipo_Doc" Mode="In" Type="String" />
+      <Parameter Name="sNro_Doc" Mode="In" Type="String" />
+      <Parameter Name="sNro_Fact" Mode="In" Type="String" />
+      <Parameter Name="sCo_Mone" Mode="In" Type="String" />
+      <Parameter Name="sCo_Prov" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cta_Ingr_Egr" Mode="In" Type="String" />
+      <Parameter Name="sDoc_Orig" Mode="In" Type="String" />
+      <Parameter Name="sMov_Ban" Mode="In" Type="String" />
+      <Parameter Name="sNro_Orig" Mode="In" Type="String" />
+      <Parameter Name="sNro_Che" Mode="In" Type="String" />
+      <Parameter Name="sPorc_Reca" Mode="In" Type="String" />
+      <Parameter Name="sPorc_Desc_Glob" Mode="In" Type="String" />
+      <Parameter Name="bAnulado" Mode="In" Type="Boolean" />
+      <Parameter Name="bAut" Mode="In" Type="Boolean" />
+      <Parameter Name="iPagar" Mode="In" Type="Int32" />
+      <Parameter Name="sObserva" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp2" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp3" Mode="In" Type="String" />
+      <Parameter Name="sdFec_Reg" Mode="In" Type="DateTime" />
+      <Parameter Name="sdFec_Emis" Mode="In" Type="DateTime" />
+      <Parameter Name="sdFec_Venc" Mode="In" Type="DateTime" />
+      <Parameter Name="deTotal_Neto" Mode="In" Type="Decimal" />
+      <Parameter Name="deTasa" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Bruto" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Desc_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Reca" Mode="In" Type="Decimal" />
+      <Parameter Name="deSaldo" Mode="In" Type="Decimal" />
+      <Parameter Name="deAdicional" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros1" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros2" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros3" Mode="In" Type="Decimal" />
+      <Parameter Name="sPro_Pago" Mode="In" Type="String" />
+      <Parameter Name="sSalestax" Mode="In" Type="String" />
+      <Parameter Name="sProv_Ter" Mode="In" Type="String" />
+      <Parameter Name="iReng_Ter" Mode="In" Type="Int32" />
+      <Parameter Name="iTipo_Origen" Mode="In" Type="Int32" />
+      <Parameter Name="sNum_Comprobante" Mode="In" Type="String" />
+      <Parameter Name="sDis_Cen" Mode="In" Type="String" />
+      <Parameter Name="sN_Control" Mode="In" Type="String" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+      <Parameter Name="sco_sucu_in" Mode="In" Type="String" />
+      <Parameter Name="sco_us_in" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+      <Parameter Name="bNac" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="pInsertarFacturaCompra" ReturnType="Collection(ProfitAdmModel.pInsertarFacturaCompra_Result)">
+      <Parameter Name="sDoc_Num" Mode="In" Type="String" />
+      <Parameter Name="sNro_Fact" Mode="In" Type="String" />
+      <Parameter Name="sDescrip" Mode="In" Type="String" />
+      <Parameter Name="sCo_Prov" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cta_Ingr_Egr" Mode="In" Type="String" />
+      <Parameter Name="sCo_Mone" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cond" Mode="In" Type="String" />
+      <Parameter Name="sN_Control" Mode="In" Type="String" />
+      <Parameter Name="sPorc_Desc_Glob" Mode="In" Type="String" />
+      <Parameter Name="sdFec_Emis" Mode="In" Type="DateTime" />
+      <Parameter Name="sdFec_Venc" Mode="In" Type="DateTime" />
+      <Parameter Name="sdFec_Reg" Mode="In" Type="DateTime" />
+      <Parameter Name="bAnulado" Mode="In" Type="Boolean" />
+      <Parameter Name="sStatus" Mode="In" Type="String" />
+      <Parameter Name="deTasa" Mode="In" Type="Decimal" />
+      <Parameter Name="sPorc_Reca" Mode="In" Type="String" />
+      <Parameter Name="deSaldo" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Bruto" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Neto" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Desc_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Reca" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros1" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros2" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros3" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="sDir_Ent" Mode="In" Type="String" />
+      <Parameter Name="sComentario" Mode="In" Type="String" />
+      <Parameter Name="bImpresa" Mode="In" Type="Boolean" />
+      <Parameter Name="sSalestax" Mode="In" Type="String" />
+      <Parameter Name="sDis_Cen" Mode="In" Type="String" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+      <Parameter Name="bNac" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="pInsertarProveedor" ReturnType="Collection(ProfitAdmModel.pInsertarProveedor_Result)">
+      <Parameter Name="sCo_Prov" Mode="In" Type="String" />
+      <Parameter Name="sProv_des" Mode="In" Type="String" />
+      <Parameter Name="sCo_seg" Mode="In" Type="String" />
+      <Parameter Name="sCo_zon" Mode="In" Type="String" />
+      <Parameter Name="bInactivo" Mode="In" Type="Boolean" />
+      <Parameter Name="sDirec1" Mode="In" Type="String" />
+      <Parameter Name="sDirec2" Mode="In" Type="String" />
+      <Parameter Name="sTelefonos" Mode="In" Type="String" />
+      <Parameter Name="sFax" Mode="In" Type="String" />
+      <Parameter Name="sRespons" Mode="In" Type="String" />
+      <Parameter Name="sdFecha_reg" Mode="In" Type="DateTime" />
+      <Parameter Name="sTip_Pro" Mode="In" Type="String" />
+      <Parameter Name="deMont_cre" Mode="In" Type="Decimal" />
+      <Parameter Name="sCo_Mone" Mode="In" Type="String" />
+      <Parameter Name="sCond_Pag" Mode="In" Type="String" />
+      <Parameter Name="iPlaz_pag" Mode="In" Type="Int32" />
+      <Parameter Name="deDesc_ppago" Mode="In" Type="Decimal" />
+      <Parameter Name="deDesc_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="sRif" Mode="In" Type="String" />
+      <Parameter Name="bNacional" Mode="In" Type="Boolean" />
+      <Parameter Name="sDis_cen" Mode="In" Type="String" />
+      <Parameter Name="sNit" Mode="In" Type="String" />
+      <Parameter Name="sEmail" Mode="In" Type="String" />
+      <Parameter Name="sCo_Cta_Ingr_Egr" Mode="In" Type="String" />
+      <Parameter Name="sComentario" Mode="In" Type="String" />
+      <Parameter Name="iTipo_Adi" Mode="In" Type="Int32" />
+      <Parameter Name="sMatriz" Mode="In" Type="String" />
+      <Parameter Name="sCo_Tab" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Per" Mode="In" Type="String" />
+      <Parameter Name="sCo_pais" Mode="In" Type="String" />
+      <Parameter Name="sCiudad" Mode="In" Type="String" />
+      <Parameter Name="sZip" Mode="In" Type="String" />
+      <Parameter Name="sWebSite" Mode="In" Type="String" />
+      <Parameter Name="sFormType" Mode="In" Type="String" />
+      <Parameter Name="sTaxid" Mode="In" Type="String" />
+      <Parameter Name="bContribu_E" Mode="In" Type="Boolean" />
+      <Parameter Name="bRete_Regis_Doc" Mode="In" Type="Boolean" />
+      <Parameter Name="dePorc_Esp" Mode="In" Type="Decimal" />
+      <Parameter Name="sCampo1" Mode="In" Type="String" />
+      <Parameter Name="sCampo2" Mode="In" Type="String" />
+      <Parameter Name="sCampo3" Mode="In" Type="String" />
+      <Parameter Name="sCampo4" Mode="In" Type="String" />
+      <Parameter Name="sCampo5" Mode="In" Type="String" />
+      <Parameter Name="sCampo6" Mode="In" Type="String" />
+      <Parameter Name="sCampo7" Mode="In" Type="String" />
+      <Parameter Name="sCampo8" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+      <Parameter Name="sTgasto" Mode="In" Type="String" />
+      <Parameter Name="sTComp" Mode="In" Type="String" />
+      <Parameter Name="sEmail_alterno" Mode="In" Type="String" />
+      <Parameter Name="bSujeto_Obj_RetenISLR_Auto" Mode="In" Type="Boolean" />
+    </FunctionImport>
+    <FunctionImport Name="pInsertarRenglonesFacturaCompra" ReturnType="Collection(ProfitAdmModel.pInsertarRenglonesFacturaCompra_Result)">
+      <Parameter Name="iReng_Num" Mode="In" Type="Int32" />
+      <Parameter Name="sDoc_Num" Mode="In" Type="String" />
+      <Parameter Name="sCo_Art" Mode="In" Type="String" />
+      <Parameter Name="sDes_Art" Mode="In" Type="String" />
+      <Parameter Name="sCo_Uni" Mode="In" Type="String" />
+      <Parameter Name="sSCo_Uni" Mode="In" Type="String" />
+      <Parameter Name="sCo_Alma" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp2" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Imp3" Mode="In" Type="String" />
+      <Parameter Name="sTipo_Doc" Mode="In" Type="String" />
+      <Parameter Name="sPorc_Desc" Mode="In" Type="String" />
+      <Parameter Name="sNum_Doc" Mode="In" Type="String" />
+      <Parameter Name="gRowGuid_Doc" Mode="In" Type="Guid" />
+      <Parameter Name="deReng_Neto" Mode="In" Type="Decimal" />
+      <Parameter Name="deCost_Unit" Mode="In" Type="Decimal" />
+      <Parameter Name="deCost_Unit_OM" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Art" Mode="In" Type="Decimal" />
+      <Parameter Name="deSTotal_Art" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp2" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Imp3" Mode="In" Type="Decimal" />
+      <Parameter Name="dePorc_Gas" Mode="In" Type="Decimal" />
+      <Parameter Name="deTotal_Dev" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Dev" Mode="In" Type="Decimal" />
+      <Parameter Name="dePendiente2" Mode="In" Type="Decimal" />
+      <Parameter Name="sComentario" Mode="In" Type="String" />
+      <Parameter Name="bLote_Asignado" Mode="In" Type="Boolean" />
+      <Parameter Name="deMonto_Desc_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_reca_Glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros1_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros2_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deOtros3_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_imp_afec_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_imp2_afec_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_imp3_afec_glob" Mode="In" Type="Decimal" />
+      <Parameter Name="deMonto_Desc" Mode="In" Type="Decimal" />
+      <Parameter Name="dePendiente" Mode="In" Type="Decimal" />
+      <Parameter Name="iReng_Doc" Mode="In" Type="Int32" />
+      <Parameter Name="sDis_Cen" Mode="In" Type="String" />
+      <Parameter Name="sCo_Sucu_In" Mode="In" Type="String" />
+      <Parameter Name="sCo_Us_In" Mode="In" Type="String" />
+      <Parameter Name="sRevisado" Mode="In" Type="String" />
+      <Parameter Name="sTrasnfe" Mode="In" Type="String" />
+      <Parameter Name="sMaquina" Mode="In" Type="String" />
+      <Parameter Name="deCosto_Adi1" Mode="In" Type="Decimal" />
+      <Parameter Name="deCosto_Adi2" Mode="In" Type="Decimal" />
+      <Parameter Name="deCosto_Adi3" Mode="In" Type="Decimal" />
+      <Parameter Name="sCredito_fiscal" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="pInsertarArticulo_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pInsertarCliente_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pInsertarDocumentoVenta_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pInsertarFacturaVenta_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+    <!--<Property Type="String" Name="Column1" Nullable="true" MaxLength="20" />-->
+  </ComplexType>
+  <EntityType Name="saArticulo">
+    <Key>
+      <PropertyRef Name="co_art" />
+    </Key>
+    <Property Name="co_art" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="fecha_reg" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="art_des" Type="String" Nullable="false" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="tipo" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="anulado" Type="Boolean" Nullable="false" />
+    <Property Name="fecha_inac" Type="DateTime" Precision="0" />
+    <Property Name="co_lin" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_subl" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_cat" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_color" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_ubicacion" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cod_proc" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="item" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="modelo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ref" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="generico" Type="Boolean" Nullable="false" />
+    <Property Name="maneja_serial" Type="Boolean" Nullable="false" />
+    <Property Name="maneja_lote" Type="Boolean" Nullable="false" />
+    <Property Name="maneja_lote_venc" Type="Boolean" Nullable="false" />
+    <Property Name="margen_min" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="margen_max" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="tipo_imp" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="co_reten" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="garantia" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="volumen" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="peso" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="stock_min" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="stock_max" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="stock_pedido" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="relac_unidad" Type="Int32" Nullable="false" />
+    <Property Name="punt_ven" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="punt_cli" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="lic_mon_ilc" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="lic_capacidad" Type="Decimal" Nullable="false" Precision="18" Scale="3" />
+    <Property Name="lic_grado_al" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="lic_tipo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="prec_om" Type="Boolean" Nullable="false" />
+    <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_cos" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="porc_margen_minimo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="porc_margen_maximo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="mont_comi" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="porc_arancel" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="numcom" Type="Int32" />
+    <Property Name="feccom" Type="DateTime" Precision="0" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="reten_iva_tercero" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="validador" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="aux_imp01" Type="Decimal" Precision="18" Scale="5" />
+    <NavigationProperty Name="saProveedor" Relationship="ProfitAdmModel.FK_saArticulo_saProveedor" FromRole="saArticulo" ToRole="saProveedor" />
+  </EntityType>
+  <EntityType Name="saCliente">
+    <Key>
+      <PropertyRef Name="co_cli" />
+    </Key>
+    <Property Name="co_cli" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="tip_cli" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cli_des" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="direc1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dir_ent2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="direc2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="telefonos" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="inactivo" Type="Boolean" Nullable="false" />
+    <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="respons" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_reg" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="puntaje" Type="Int32" Nullable="false" />
+    <Property Name="mont_cre" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="co_mone" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cond_pag" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="plaz_pag" Type="Int32" Nullable="false" />
+    <Property Name="desc_ppago" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="co_zon" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_seg" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_ven" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="desc_glob" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="horar_caja" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="frecu_vist" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="lunes" Type="Boolean" Nullable="false" />
+    <Property Name="martes" Type="Boolean" Nullable="false" />
+    <Property Name="miercoles" Type="Boolean" Nullable="false" />
+    <Property Name="jueves" Type="Boolean" Nullable="false" />
+    <Property Name="viernes" Type="Boolean" Nullable="false" />
+    <Property Name="sabado" Type="Boolean" Nullable="false" />
+    <Property Name="domingo" Type="Boolean" Nullable="false" />
+    <Property Name="rif" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="nit" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="contrib" Type="Boolean" Nullable="false" />
+    <Property Name="numcom" Type="Int32" />
+    <Property Name="feccom" Type="DateTime" Precision="0" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_cta_ingr_egr" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="juridico" Type="Boolean" Nullable="false" />
+    <Property Name="tipo_adi" Type="Int32" Nullable="false" />
+    <Property Name="matriz" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="co_tab" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_per" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="valido" Type="Boolean" Nullable="false" />
+    <Property Name="ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="login" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="website" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="sincredito" Type="Boolean" Nullable="false" />
+    <Property Name="contribu_e" Type="Boolean" Nullable="false" />
+    <Property Name="rete_regis_doc" Type="Boolean" Nullable="false" />
+    <Property Name="porc_esp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="co_pais" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="serialp" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="salestax" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="estado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="validador" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="email_alterno" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="saCliente1" Relationship="ProfitAdmModel.FK_saCliente_saClienteCasaMatriz" FromRole="saCliente" ToRole="saCliente1" />
+    <NavigationProperty Name="saCliente2" Relationship="ProfitAdmModel.FK_saCliente_saClienteCasaMatriz" FromRole="saCliente1" ToRole="saCliente" />
+    <NavigationProperty Name="saDocumentoVenta" Relationship="ProfitAdmModel.FK_saDocumentoVenta_saCliente" FromRole="saCliente" ToRole="saDocumentoVenta" />
+    <NavigationProperty Name="saFacturaVenta" Relationship="ProfitAdmModel.FK_saFacturaVenta_saCliente" FromRole="saCliente" ToRole="saFacturaVenta" />
+  </EntityType>
+  <EntityType Name="saDocumentoVenta">
+    <Key>
+      <PropertyRef Name="co_tipo_doc" />
+      <PropertyRef Name="nro_doc" />
+    </Key>
+    <Property Name="co_tipo_doc" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="nro_doc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="co_cli" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="co_ven" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_mone" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="mov_ban" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="tasa" Type="Decimal" Nullable="false" Precision="21" Scale="8" />
+    <Property Name="observa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="fec_reg" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_emis" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_venc" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="anulado" Type="Boolean" Nullable="false" />
+    <Property Name="aut" Type="Boolean" Nullable="false" />
+    <Property Name="contrib" Type="Boolean" Nullable="false" />
+    <Property Name="doc_orig" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_origen" Type="Int32" />
+    <Property Name="nro_orig" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nro_che" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="saldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_bruto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="porc_desc_glob" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="monto_desc_glob" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="porc_reca" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="monto_reca" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_neto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="tipo_imp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="porc_imp" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="num_comprobante" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="feccom" Type="DateTime" Precision="0" />
+    <Property Name="numcom" Type="Int32" />
+    <Property Name="n_control" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="comis1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="comis2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="comis3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="comis4" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="comis5" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="comis6" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="adicional" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="salestax" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="ven_ter" Type="Boolean" Nullable="false" />
+    <Property Name="impfis" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="impfisfac" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="imp_nro_z" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="otros1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="validador" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="co_cta_ingr_egr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="saCliente" Relationship="ProfitAdmModel.FK_saDocumentoVenta_saCliente" FromRole="saDocumentoVenta" ToRole="saCliente" />
+  </EntityType>
+  <EntityType Name="saFacturaVenta">
+    <Key>
+      <PropertyRef Name="doc_num" />
+    </Key>
+    <Property Name="doc_num" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="descrip" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_cli" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="co_tran" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_mone" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_ven" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_cond" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fec_emis" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_venc" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_reg" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="anulado" Type="Boolean" Nullable="false" />
+    <Property Name="status" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="n_control" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ven_ter" Type="Boolean" Nullable="false" />
+    <Property Name="tasa" Type="Decimal" Nullable="false" Precision="21" Scale="8" />
+    <Property Name="porc_desc_glob" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="monto_desc_glob" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="porc_reca" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="monto_reca" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_bruto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_neto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="dir_ent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="feccom" Type="DateTime" Precision="0" />
+    <Property Name="numcom" Type="Int32" />
+    <Property Name="contrib" Type="Boolean" Nullable="false" />
+    <Property Name="impresa" Type="Boolean" Nullable="false" />
+    <Property Name="seriales_s" Type="Int32" />
+    <Property Name="salestax" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="impfis" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="impfisfac" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="imp_nro_z" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="validador" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="co_cta_ingr_egr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="saCliente" Relationship="ProfitAdmModel.FK_saFacturaVenta_saCliente" FromRole="saFacturaVenta" ToRole="saCliente" />
+    <NavigationProperty Name="saFacturaVentaReng" Relationship="ProfitAdmModel.FK_saFacturaVentaReng_saFacturaVenta" FromRole="saFacturaVenta" ToRole="saFacturaVentaReng" />
+  </EntityType>
+  <EntityType Name="saFacturaVentaReng">
+    <Key>
+      <PropertyRef Name="reng_num" />
+      <PropertyRef Name="doc_num" />
+    </Key>
+    <Property Name="reng_num" Type="Int32" Nullable="false" />
+    <Property Name="doc_num" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="co_art" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="des_art" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="co_alma" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="total_art" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="stotal_art" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="co_uni" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="sco_uni" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_precio" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="prec_vta" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="prec_vta_om" Type="Decimal" Precision="18" Scale="5" />
+    <Property Name="porc_desc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="monto_desc" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="tipo_imp" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="porc_imp" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="reng_neto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="pendiente" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="pendiente2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="tipo_doc" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="num_doc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="rowguid_doc" Type="Guid" />
+    <Property Name="total_dev" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_dev" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="otros" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="lote_asignado" Type="Boolean" Nullable="false" />
+    <Property Name="monto_desc_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_reca_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="otros1_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="otros2_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="otros3_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp_afec_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp2_afec_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp3_afec_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="saFacturaVenta" Relationship="ProfitAdmModel.FK_saFacturaVentaReng_saFacturaVenta" FromRole="saFacturaVentaReng" ToRole="saFacturaVenta" />
+  </EntityType>
+  <Association Name="FK_saCliente_saClienteCasaMatriz">
+    <End Type="ProfitAdmModel.saCliente" Role="saCliente" Multiplicity="0..1" />
+    <End Type="ProfitAdmModel.saCliente" Role="saCliente1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saCliente">
+        <PropertyRef Name="co_cli" />
+      </Principal>
+      <Dependent Role="saCliente1">
+        <PropertyRef Name="matriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saDocumentoVenta_saCliente">
+    <End Type="ProfitAdmModel.saCliente" Role="saCliente" Multiplicity="1" />
+    <End Type="ProfitAdmModel.saDocumentoVenta" Role="saDocumentoVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saCliente">
+        <PropertyRef Name="co_cli" />
+      </Principal>
+      <Dependent Role="saDocumentoVenta">
+        <PropertyRef Name="co_cli" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saFacturaVenta_saCliente">
+    <End Type="ProfitAdmModel.saCliente" Role="saCliente" Multiplicity="1" />
+    <End Type="ProfitAdmModel.saFacturaVenta" Role="saFacturaVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saCliente">
+        <PropertyRef Name="co_cli" />
+      </Principal>
+      <Dependent Role="saFacturaVenta">
+        <PropertyRef Name="co_cli" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saFacturaVentaReng_saFacturaVenta">
+    <End Type="ProfitAdmModel.saFacturaVenta" Role="saFacturaVenta" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ProfitAdmModel.saFacturaVentaReng" Role="saFacturaVentaReng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saFacturaVenta">
+        <PropertyRef Name="doc_num" />
+      </Principal>
+      <Dependent Role="saFacturaVentaReng">
+        <PropertyRef Name="doc_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="pInsertarRenglonesFacturaVenta_Result">
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pInsertarUnidadArticuloRenglon_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="saUnidad">
+    <Key>
+      <PropertyRef Name="co_uni" />
+    </Key>
+    <Property Name="co_uni" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="des_uni" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="validador" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+  </EntityType>
+  <ComplexType Name="pInsertarUnidad_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="saDocumentoCompra">
+    <Key>
+      <PropertyRef Name="co_tipo_doc" />
+      <PropertyRef Name="nro_doc" />
+    </Key>
+    <Property Name="co_tipo_doc" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="nro_doc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="nro_fact" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="co_mone" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_prov" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="doc_orig" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="mov_ban" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="nro_orig" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nro_che" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="porc_reca" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="monto_reca" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="porc_desc_glob" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="monto_desc_glob" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="anulado" Type="Boolean" Nullable="false" />
+    <Property Name="aut" Type="Boolean" Nullable="false" />
+    <Property Name="pagar" Type="Int32" Nullable="false" />
+    <Property Name="observa" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_imp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fec_reg" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_emis" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_venc" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="porc_imp" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="tasa" Type="Decimal" Nullable="false" Precision="21" Scale="8" />
+    <Property Name="total_bruto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_neto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="saldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="adicional" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="pro_pago" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="salestax" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="prov_ter" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="reng_ter" Type="Int32" />
+    <Property Name="tipo_origen" Type="Int32" />
+    <Property Name="num_comprobante" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+    <Property Name="feccom" Type="DateTime" Precision="0" />
+    <Property Name="numcom" Type="Int32" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="n_control" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="validador" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="nac" Type="Boolean" />
+    <Property Name="co_cta_ingr_egr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="saProveedor" Relationship="ProfitAdmModel.FK_saDocumentoCompra_saProveedor" FromRole="saDocumentoCompra" ToRole="saProveedor" />
+    <NavigationProperty Name="saProveedor1" Relationship="ProfitAdmModel.FK_saDocumentoCompra_saProveedorTercero" FromRole="saDocumentoCompra" ToRole="saProveedor" />
+  </EntityType>
+  <EntityType Name="saFacturaCompra">
+    <Key>
+      <PropertyRef Name="doc_num" />
+    </Key>
+    <Property Name="doc_num" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="nro_fact" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="descrip" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_prov" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="co_mone" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_cond" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="porc_desc_glob" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="porc_reca" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="n_control" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="fec_emis" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_venc" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="fec_reg" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="tasa" Type="Decimal" Nullable="false" Precision="21" Scale="8" />
+    <Property Name="saldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_bruto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_neto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_desc_glob" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_reca" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros1" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="otros3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="monto_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="anulado" Type="Boolean" Nullable="false" />
+    <Property Name="impresa" Type="Boolean" Nullable="false" />
+    <Property Name="seriales_e" Type="Int32" />
+    <Property Name="salestax" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="feccom" Type="DateTime" Precision="0" />
+    <Property Name="numcom" Type="Int32" />
+    <Property Name="dir_ent" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="validador" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="nac" Type="Boolean" />
+    <Property Name="co_cta_ingr_egr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="saProveedor" Relationship="ProfitAdmModel.FK_saFacturaCompra_saProveedor" FromRole="saFacturaCompra" ToRole="saProveedor" />
+    <NavigationProperty Name="saFacturaCompraReng" Relationship="ProfitAdmModel.FK_saFacturaCompraReng_saFacturaCompra" FromRole="saFacturaCompra" ToRole="saFacturaCompraReng" />
+  </EntityType>
+  <EntityType Name="saFacturaCompraReng">
+    <Key>
+      <PropertyRef Name="reng_num" />
+      <PropertyRef Name="doc_num" />
+    </Key>
+    <Property Name="reng_num" Type="Int32" Nullable="false" />
+    <Property Name="doc_num" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="co_art" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="des_art" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="co_uni" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="sco_uni" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_alma" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_imp3" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_doc" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+    <Property Name="porc_desc" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="num_doc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="rowguid_doc" Type="Guid" />
+    <Property Name="reng_neto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="cost_unit" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="cost_unit_om" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="total_art" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="stotal_art" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="otros" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp3" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="porc_gas" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="total_dev" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_dev" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="lote_asignado" Type="Boolean" Nullable="false" />
+    <Property Name="monto_desc_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_reca_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="otros1_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="otros2_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="otros3_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp_afec_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp2_afec_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_imp3_afec_glob" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="monto_desc" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="pendiente" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="pendiente2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="costo_adi1" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="costo_adi2" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="costo_adi3" Type="Decimal" Nullable="false" Precision="18" Scale="5" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="saFacturaCompra" Relationship="ProfitAdmModel.FK_saFacturaCompraReng_saFacturaCompra" FromRole="saFacturaCompraReng" ToRole="saFacturaCompra" />
+  </EntityType>
+  <EntityType Name="saProveedor">
+    <Key>
+      <PropertyRef Name="co_prov" />
+    </Key>
+    <Property Name="co_prov" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="prov_des" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="co_seg" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_zon" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="tip_pro" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="inactivo" Type="Boolean" Nullable="false" />
+    <Property Name="direc1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="direc2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="telefonos" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="fax" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="respons" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_reg" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="mont_cre" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="co_mone" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cond_pag" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="plaz_pag" Type="Int32" Nullable="false" />
+    <Property Name="desc_ppago" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="desc_glob" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="rif" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="nacional" Type="Boolean" Nullable="false" />
+    <Property Name="numcom" Type="Int32" />
+    <Property Name="feccom" Type="DateTime" Precision="0" />
+    <Property Name="dis_cen" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="nit" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_cta_ingr_egr" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="comentario" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="tipo_adi" Type="Int32" Nullable="false" />
+    <Property Name="matriz" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+    <Property Name="co_tab" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="tipo_per" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="co_pais" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="zip" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="website" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="formtype" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="taxid" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="contribu_e" Type="Boolean" Nullable="false" />
+    <Property Name="rete_regis_doc" Type="Boolean" Nullable="false" />
+    <Property Name="porc_esp" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="campo1" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo2" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo3" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo4" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo5" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo6" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo7" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="campo8" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="co_us_in" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_in" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_in" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="co_us_mo" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="co_sucu_mo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fe_us_mo" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="revisado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="trasnfe" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="validador" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="rowguid" Type="Guid" Nullable="false" />
+    <Property Name="email_alterno" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="sujeto_obj_retenISLR_auto" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="saArticulo" Relationship="ProfitAdmModel.FK_saArticulo_saProveedor" FromRole="saProveedor" ToRole="saArticulo" />
+    <NavigationProperty Name="saDocumentoCompra" Relationship="ProfitAdmModel.FK_saDocumentoCompra_saProveedor" FromRole="saProveedor" ToRole="saDocumentoCompra" />
+    <NavigationProperty Name="saDocumentoCompra1" Relationship="ProfitAdmModel.FK_saDocumentoCompra_saProveedorTercero" FromRole="saProveedor" ToRole="saDocumentoCompra" />
+    <NavigationProperty Name="saFacturaCompra" Relationship="ProfitAdmModel.FK_saFacturaCompra_saProveedor" FromRole="saProveedor" ToRole="saFacturaCompra" />
+    <NavigationProperty Name="saProveedor1" Relationship="ProfitAdmModel.FK_saProveedor_saProveedorCasaMatriz" FromRole="saProveedor" ToRole="saProveedor1" />
+    <NavigationProperty Name="saProveedor2" Relationship="ProfitAdmModel.FK_saProveedor_saProveedorCasaMatriz" FromRole="saProveedor1" ToRole="saProveedor" />
+  </EntityType>
+  <Association Name="FK_saArticulo_saProveedor">
+    <End Type="ProfitAdmModel.saProveedor" Role="saProveedor" Multiplicity="0..1" />
+    <End Type="ProfitAdmModel.saArticulo" Role="saArticulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saArticulo">
+        <PropertyRef Name="reten_iva_tercero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saDocumentoCompra_saProveedor">
+    <End Type="ProfitAdmModel.saProveedor" Role="saProveedor" Multiplicity="1" />
+    <End Type="ProfitAdmModel.saDocumentoCompra" Role="saDocumentoCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saDocumentoCompra">
+        <PropertyRef Name="co_prov" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saDocumentoCompra_saProveedorTercero">
+    <End Type="ProfitAdmModel.saProveedor" Role="saProveedor" Multiplicity="0..1" />
+    <End Type="ProfitAdmModel.saDocumentoCompra" Role="saDocumentoCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saDocumentoCompra">
+        <PropertyRef Name="prov_ter" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saFacturaCompra_saProveedor">
+    <End Type="ProfitAdmModel.saProveedor" Role="saProveedor" Multiplicity="1" />
+    <End Type="ProfitAdmModel.saFacturaCompra" Role="saFacturaCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saFacturaCompra">
+        <PropertyRef Name="co_prov" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saFacturaCompraReng_saFacturaCompra">
+    <End Type="ProfitAdmModel.saFacturaCompra" Role="saFacturaCompra" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="ProfitAdmModel.saFacturaCompraReng" Role="saFacturaCompraReng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saFacturaCompra">
+        <PropertyRef Name="doc_num" />
+      </Principal>
+      <Dependent Role="saFacturaCompraReng">
+        <PropertyRef Name="doc_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saProveedor_saProveedorCasaMatriz">
+    <End Type="ProfitAdmModel.saProveedor" Role="saProveedor" Multiplicity="0..1" />
+    <End Type="ProfitAdmModel.saProveedor" Role="saProveedor1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saProveedor1">
+        <PropertyRef Name="matriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="pInsertarDocumentoCompra_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pInsertarFacturaCompra_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pInsertarProveedor_Result">
+    <Property Type="Binary" Name="validador" Nullable="true" />
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="pInsertarRenglonesFacturaCompra_Result">
+    <Property Type="DateTime" Name="fe_us_in" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="fe_us_mo" Nullable="true" Precision="23" />
+    <Property Type="Guid" Name="rowguid" Nullable="true" />
+  </ComplexType>
+</Schema>

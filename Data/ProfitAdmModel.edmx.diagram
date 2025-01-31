@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="764753f3015a4233b64ef7c1e7b293d7" Name="Diagram1" ZoomLevel="73" >
+        <EntityTypeShape EntityType="ProfitAdmModel.saArticulo" Width="1.5" PointX="6.5" PointY="0.5" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saCliente" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saDocumentoVenta" Width="1.5" PointX="8.5" PointY="0.5" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saFacturaVenta" Width="1.5" PointX="2.5" PointY="0.5" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saFacturaVentaReng" Width="1.5" PointX="4.5" PointY="0.5" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saCliente_saClienteCasaMatriz" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saDocumentoVenta_saCliente" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saFacturaVenta_saCliente" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saFacturaVentaReng_saFacturaVenta" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saUnidad" Width="1.5" PointX="10.5" PointY="0.5" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saDocumentoCompra" Width="1.5" PointX="14.75" PointY="35" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saFacturaCompra" Width="1.5" PointX="14.75" PointY="22.375" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saFacturaCompraReng" Width="1.5" PointX="17" PointY="22.375" />
+        <EntityTypeShape EntityType="ProfitAdmModel.saProveedor" Width="1.5" PointX="12.5" PointY="0.5" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saArticulo_saProveedor" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saDocumentoCompra_saProveedor" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saDocumentoCompra_saProveedorTercero" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saFacturaCompra_saProveedor" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saFacturaCompraReng_saFacturaCompra" />
+        <AssociationConnector Association="ProfitAdmModel.FK_saProveedor_saProveedorCasaMatriz" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

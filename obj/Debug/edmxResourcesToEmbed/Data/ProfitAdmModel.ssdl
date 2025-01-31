@@ -1,0 +1,1394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ProfitAdmModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="saArticulo">
+    <Key>
+      <PropertyRef Name="co_art" />
+    </Key>
+    <Property Name="co_art" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="fecha_reg" Type="smalldatetime" Nullable="false" />
+    <Property Name="art_des" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="tipo" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="anulado" Type="bit" Nullable="false" />
+    <Property Name="fecha_inac" Type="smalldatetime" />
+    <Property Name="co_lin" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_subl" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_cat" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_color" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_ubicacion" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="cod_proc" Type="char" MaxLength="6" />
+    <Property Name="item" Type="char" MaxLength="10" />
+    <Property Name="modelo" Type="varchar" MaxLength="20" />
+    <Property Name="ref" Type="varchar" MaxLength="20" />
+    <Property Name="generico" Type="bit" Nullable="false" />
+    <Property Name="maneja_serial" Type="bit" Nullable="false" />
+    <Property Name="maneja_lote" Type="bit" Nullable="false" />
+    <Property Name="maneja_lote_venc" Type="bit" Nullable="false" />
+    <Property Name="margen_min" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="margen_max" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="tipo_imp" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="tipo_imp2" Type="char" MaxLength="1" />
+    <Property Name="tipo_imp3" Type="char" MaxLength="1" />
+    <Property Name="co_reten" Type="char" MaxLength="6" />
+    <Property Name="garantia" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="volumen" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="peso" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="stock_min" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="stock_max" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="stock_pedido" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="relac_unidad" Type="int" Nullable="false" />
+    <Property Name="punt_ven" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="punt_cli" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="lic_mon_ilc" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="lic_capacidad" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+    <Property Name="lic_grado_al" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="lic_tipo" Type="char" MaxLength="1" />
+    <Property Name="prec_om" Type="bit" Nullable="false" />
+    <Property Name="comentario" Type="varchar(max)" />
+    <Property Name="tipo_cos" Type="char" MaxLength="4" />
+    <Property Name="porc_margen_minimo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="porc_margen_maximo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="mont_comi" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="porc_arancel" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="numcom" Type="int" />
+    <Property Name="feccom" Type="smalldatetime" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="reten_iva_tercero" Type="char" MaxLength="16" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="aux_imp01" Type="decimal" Precision="18" Scale="5" />
+  </EntityType>
+  <EntityType Name="saCliente">
+    <Key>
+      <PropertyRef Name="co_cli" />
+    </Key>
+    <Property Name="co_cli" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="tip_cli" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="cli_des" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="direc1" Type="varchar(max)" />
+    <Property Name="dir_ent2" Type="varchar(max)" />
+    <Property Name="direc2" Type="varchar(max)" />
+    <Property Name="telefonos" Type="varchar" MaxLength="60" />
+    <Property Name="fax" Type="varchar" MaxLength="60" />
+    <Property Name="inactivo" Type="bit" Nullable="false" />
+    <Property Name="comentario" Type="varchar(max)" />
+    <Property Name="respons" Type="varchar" MaxLength="60" />
+    <Property Name="fecha_reg" Type="smalldatetime" Nullable="false" />
+    <Property Name="puntaje" Type="int" Nullable="false" />
+    <Property Name="mont_cre" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="co_mone" Type="char" MaxLength="6" />
+    <Property Name="cond_pag" Type="char" MaxLength="6" />
+    <Property Name="plaz_pag" Type="int" Nullable="false" />
+    <Property Name="desc_ppago" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="co_zon" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_seg" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_ven" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="desc_glob" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="horar_caja" Type="varchar" MaxLength="60" />
+    <Property Name="frecu_vist" Type="varchar" MaxLength="60" />
+    <Property Name="lunes" Type="bit" Nullable="false" />
+    <Property Name="martes" Type="bit" Nullable="false" />
+    <Property Name="miercoles" Type="bit" Nullable="false" />
+    <Property Name="jueves" Type="bit" Nullable="false" />
+    <Property Name="viernes" Type="bit" Nullable="false" />
+    <Property Name="sabado" Type="bit" Nullable="false" />
+    <Property Name="domingo" Type="bit" Nullable="false" />
+    <Property Name="rif" Type="varchar" MaxLength="18" />
+    <Property Name="nit" Type="varchar" MaxLength="18" />
+    <Property Name="contrib" Type="bit" Nullable="false" />
+    <Property Name="numcom" Type="int" />
+    <Property Name="feccom" Type="smalldatetime" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="email" Type="varchar" MaxLength="60" />
+    <Property Name="co_cta_ingr_egr" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="juridico" Type="bit" Nullable="false" />
+    <Property Name="tipo_adi" Type="int" Nullable="false" />
+    <Property Name="matriz" Type="char" MaxLength="16" />
+    <Property Name="co_tab" Type="char" MaxLength="20" />
+    <Property Name="tipo_per" Type="char" MaxLength="1" />
+    <Property Name="valido" Type="bit" Nullable="false" />
+    <Property Name="ciudad" Type="varchar" MaxLength="50" />
+    <Property Name="zip" Type="varchar" MaxLength="10" />
+    <Property Name="login" Type="varchar" MaxLength="10" />
+    <Property Name="password" Type="varchar" MaxLength="50" />
+    <Property Name="website" Type="varchar" MaxLength="200" />
+    <Property Name="sincredito" Type="bit" Nullable="false" />
+    <Property Name="contribu_e" Type="bit" Nullable="false" />
+    <Property Name="rete_regis_doc" Type="bit" Nullable="false" />
+    <Property Name="porc_esp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="co_pais" Type="char" MaxLength="6" />
+    <Property Name="serialp" Type="char" MaxLength="30" />
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="salestax" Type="char" MaxLength="8" />
+    <Property Name="estado" Type="char" MaxLength="1" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="email_alterno" Type="varchar" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="saDocumentoCompra">
+    <Key>
+      <PropertyRef Name="co_tipo_doc" />
+      <PropertyRef Name="nro_doc" />
+    </Key>
+    <Property Name="co_tipo_doc" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="nro_doc" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="nro_fact" Type="varchar" MaxLength="20" />
+    <Property Name="co_mone" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_prov" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="doc_orig" Type="char" MaxLength="6" />
+    <Property Name="mov_ban" Type="char" MaxLength="20" />
+    <Property Name="nro_orig" Type="varchar" MaxLength="20" />
+    <Property Name="nro_che" Type="varchar" MaxLength="20" />
+    <Property Name="porc_reca" Type="varchar" MaxLength="15" />
+    <Property Name="monto_reca" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="porc_desc_glob" Type="varchar" MaxLength="15" />
+    <Property Name="monto_desc_glob" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="anulado" Type="bit" Nullable="false" />
+    <Property Name="aut" Type="bit" Nullable="false" />
+    <Property Name="pagar" Type="int" Nullable="false" />
+    <Property Name="observa" Type="varchar(max)" />
+    <Property Name="tipo_imp" Type="char" MaxLength="1" />
+    <Property Name="tipo_imp2" Type="char" MaxLength="1" />
+    <Property Name="tipo_imp3" Type="char" MaxLength="1" />
+    <Property Name="fec_reg" Type="smalldatetime" Nullable="false" />
+    <Property Name="fec_emis" Type="smalldatetime" Nullable="false" />
+    <Property Name="fec_venc" Type="smalldatetime" Nullable="false" />
+    <Property Name="porc_imp" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp3" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="tasa" Type="decimal" Precision="21" Scale="8" Nullable="false" />
+    <Property Name="total_bruto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_neto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="adicional" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="pro_pago" Type="xml" />
+    <Property Name="salestax" Type="char" MaxLength="8" />
+    <Property Name="prov_ter" Type="char" MaxLength="16" />
+    <Property Name="reng_ter" Type="int" />
+    <Property Name="tipo_origen" Type="int" />
+    <Property Name="num_comprobante" Type="varchar" MaxLength="14" />
+    <Property Name="feccom" Type="smalldatetime" />
+    <Property Name="numcom" Type="int" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="n_control" Type="varchar" MaxLength="20" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="nac" Type="bit" />
+    <Property Name="co_cta_ingr_egr" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="saDocumentoVenta">
+    <Key>
+      <PropertyRef Name="co_tipo_doc" />
+      <PropertyRef Name="nro_doc" />
+    </Key>
+    <Property Name="co_tipo_doc" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="nro_doc" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="co_cli" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="co_ven" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_mone" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="mov_ban" Type="char" MaxLength="20" />
+    <Property Name="tasa" Type="decimal" Precision="21" Scale="8" Nullable="false" />
+    <Property Name="observa" Type="varchar(max)" />
+    <Property Name="fec_reg" Type="smalldatetime" Nullable="false" />
+    <Property Name="fec_emis" Type="smalldatetime" Nullable="false" />
+    <Property Name="fec_venc" Type="smalldatetime" Nullable="false" />
+    <Property Name="anulado" Type="bit" Nullable="false" />
+    <Property Name="aut" Type="bit" Nullable="false" />
+    <Property Name="contrib" Type="bit" Nullable="false" />
+    <Property Name="doc_orig" Type="char" MaxLength="6" />
+    <Property Name="tipo_origen" Type="int" />
+    <Property Name="nro_orig" Type="varchar" MaxLength="20" />
+    <Property Name="nro_che" Type="varchar" MaxLength="20" />
+    <Property Name="saldo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_bruto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="porc_desc_glob" Type="varchar" MaxLength="15" />
+    <Property Name="monto_desc_glob" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="porc_reca" Type="varchar" MaxLength="15" />
+    <Property Name="monto_reca" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_neto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="tipo_imp" Type="char" MaxLength="1" />
+    <Property Name="tipo_imp2" Type="char" MaxLength="1" />
+    <Property Name="tipo_imp3" Type="char" MaxLength="1" />
+    <Property Name="porc_imp" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp3" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="num_comprobante" Type="varchar" MaxLength="14" />
+    <Property Name="feccom" Type="smalldatetime" />
+    <Property Name="numcom" Type="int" />
+    <Property Name="n_control" Type="varchar" MaxLength="20" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="comis1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="comis2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="comis3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="comis4" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="comis5" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="comis6" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="adicional" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="salestax" Type="char" MaxLength="8" />
+    <Property Name="ven_ter" Type="bit" Nullable="false" />
+    <Property Name="impfis" Type="varchar" MaxLength="20" />
+    <Property Name="impfisfac" Type="varchar" MaxLength="15" />
+    <Property Name="imp_nro_z" Type="char" MaxLength="15" />
+    <Property Name="otros1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="co_cta_ingr_egr" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="saFacturaCompra">
+    <Key>
+      <PropertyRef Name="doc_num" />
+    </Key>
+    <Property Name="doc_num" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="nro_fact" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="descrip" Type="varchar" MaxLength="60" />
+    <Property Name="co_prov" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="co_mone" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_cond" Type="char" MaxLength="6" />
+    <Property Name="porc_desc_glob" Type="varchar" MaxLength="15" />
+    <Property Name="porc_reca" Type="varchar" MaxLength="15" />
+    <Property Name="status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="n_control" Type="varchar" MaxLength="20" />
+    <Property Name="fec_emis" Type="smalldatetime" Nullable="false" />
+    <Property Name="fec_venc" Type="smalldatetime" Nullable="false" />
+    <Property Name="fec_reg" Type="smalldatetime" Nullable="false" />
+    <Property Name="tasa" Type="decimal" Precision="21" Scale="8" Nullable="false" />
+    <Property Name="saldo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_bruto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_neto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_desc_glob" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_reca" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="anulado" Type="bit" Nullable="false" />
+    <Property Name="impresa" Type="bit" Nullable="false" />
+    <Property Name="seriales_e" Type="int" />
+    <Property Name="salestax" Type="char" MaxLength="8" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="feccom" Type="smalldatetime" />
+    <Property Name="numcom" Type="int" />
+    <Property Name="dir_ent" Type="varchar(max)" />
+    <Property Name="comentario" Type="varchar(max)" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="nac" Type="bit" />
+    <Property Name="co_cta_ingr_egr" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="saFacturaCompraReng">
+    <Key>
+      <PropertyRef Name="reng_num" />
+      <PropertyRef Name="doc_num" />
+    </Key>
+    <Property Name="reng_num" Type="int" Nullable="false" />
+    <Property Name="doc_num" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="co_art" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="des_art" Type="varchar" MaxLength="120" />
+    <Property Name="co_uni" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="sco_uni" Type="char" MaxLength="6" />
+    <Property Name="co_alma" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="tipo_imp" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="tipo_imp2" Type="char" MaxLength="1" />
+    <Property Name="tipo_imp3" Type="char" MaxLength="1" />
+    <Property Name="tipo_doc" Type="char" MaxLength="4" />
+    <Property Name="porc_desc" Type="varchar" MaxLength="15" />
+    <Property Name="num_doc" Type="varchar" MaxLength="20" />
+    <Property Name="rowguid_doc" Type="uniqueidentifier" />
+    <Property Name="reng_neto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="cost_unit" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="cost_unit_om" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="total_art" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="stotal_art" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="otros" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp3" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp3" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_gas" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_dev" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_dev" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="lote_asignado" Type="bit" Nullable="false" />
+    <Property Name="monto_desc_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_reca_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="otros1_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="otros2_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="otros3_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp_afec_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp2_afec_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp3_afec_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_desc" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="pendiente" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="pendiente2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="comentario" Type="varchar(max)" />
+    <Property Name="costo_adi1" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="costo_adi2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="costo_adi3" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="saFacturaVenta">
+    <Key>
+      <PropertyRef Name="doc_num" />
+    </Key>
+    <Property Name="doc_num" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="descrip" Type="varchar" MaxLength="60" />
+    <Property Name="co_cli" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="co_tran" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_mone" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_ven" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_cond" Type="char" MaxLength="6" />
+    <Property Name="fec_emis" Type="smalldatetime" Nullable="false" />
+    <Property Name="fec_venc" Type="smalldatetime" Nullable="false" />
+    <Property Name="fec_reg" Type="smalldatetime" Nullable="false" />
+    <Property Name="anulado" Type="bit" Nullable="false" />
+    <Property Name="status" Type="char" MaxLength="1" />
+    <Property Name="n_control" Type="varchar" MaxLength="20" />
+    <Property Name="ven_ter" Type="bit" Nullable="false" />
+    <Property Name="tasa" Type="decimal" Precision="21" Scale="8" Nullable="false" />
+    <Property Name="porc_desc_glob" Type="varchar" MaxLength="15" />
+    <Property Name="monto_desc_glob" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="porc_reca" Type="varchar" MaxLength="15" />
+    <Property Name="monto_reca" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_bruto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="monto_imp3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros1" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros2" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="otros3" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="total_neto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saldo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="dir_ent" Type="varchar(max)" />
+    <Property Name="comentario" Type="varchar(max)" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="feccom" Type="smalldatetime" />
+    <Property Name="numcom" Type="int" />
+    <Property Name="contrib" Type="bit" Nullable="false" />
+    <Property Name="impresa" Type="bit" Nullable="false" />
+    <Property Name="seriales_s" Type="int" />
+    <Property Name="salestax" Type="char" MaxLength="8" />
+    <Property Name="impfis" Type="varchar" MaxLength="20" />
+    <Property Name="impfisfac" Type="varchar" MaxLength="20" />
+    <Property Name="imp_nro_z" Type="varchar" MaxLength="20" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="co_cta_ingr_egr" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="saFacturaVentaReng">
+    <Key>
+      <PropertyRef Name="reng_num" />
+      <PropertyRef Name="doc_num" />
+    </Key>
+    <Property Name="reng_num" Type="int" Nullable="false" />
+    <Property Name="doc_num" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="co_art" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="des_art" Type="varchar" MaxLength="120" />
+    <Property Name="co_alma" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="total_art" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="stotal_art" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="co_uni" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="sco_uni" Type="char" MaxLength="6" />
+    <Property Name="co_precio" Type="char" MaxLength="6" />
+    <Property Name="prec_vta" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="prec_vta_om" Type="decimal" Precision="18" Scale="5" />
+    <Property Name="porc_desc" Type="varchar" MaxLength="15" />
+    <Property Name="monto_desc" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="tipo_imp" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="tipo_imp2" Type="char" MaxLength="1" />
+    <Property Name="tipo_imp3" Type="char" MaxLength="1" />
+    <Property Name="porc_imp" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="porc_imp3" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp3" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="reng_neto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="pendiente" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="pendiente2" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="tipo_doc" Type="char" MaxLength="4" />
+    <Property Name="num_doc" Type="varchar" MaxLength="20" />
+    <Property Name="rowguid_doc" Type="uniqueidentifier" />
+    <Property Name="total_dev" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_dev" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="otros" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="comentario" Type="varchar(max)" />
+    <Property Name="lote_asignado" Type="bit" Nullable="false" />
+    <Property Name="monto_desc_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_reca_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="otros1_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="otros2_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="otros3_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp_afec_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp2_afec_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="monto_imp3_afec_glob" Type="decimal" Precision="18" Scale="5" Nullable="false" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="saProveedor">
+    <Key>
+      <PropertyRef Name="co_prov" />
+    </Key>
+    <Property Name="co_prov" Type="char" MaxLength="16" Nullable="false" />
+    <Property Name="prov_des" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="co_seg" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_zon" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="tip_pro" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="inactivo" Type="bit" Nullable="false" />
+    <Property Name="direc1" Type="varchar(max)" />
+    <Property Name="direc2" Type="varchar(max)" />
+    <Property Name="telefonos" Type="varchar" MaxLength="60" />
+    <Property Name="fax" Type="varchar" MaxLength="60" />
+    <Property Name="respons" Type="varchar" MaxLength="60" />
+    <Property Name="fecha_reg" Type="smalldatetime" Nullable="false" />
+    <Property Name="mont_cre" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="co_mone" Type="char" MaxLength="6" />
+    <Property Name="cond_pag" Type="char" MaxLength="6" />
+    <Property Name="plaz_pag" Type="int" Nullable="false" />
+    <Property Name="desc_ppago" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="desc_glob" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="rif" Type="varchar" MaxLength="18" />
+    <Property Name="nacional" Type="bit" Nullable="false" />
+    <Property Name="numcom" Type="int" />
+    <Property Name="feccom" Type="smalldatetime" />
+    <Property Name="dis_cen" Type="xml" />
+    <Property Name="nit" Type="varchar" MaxLength="18" />
+    <Property Name="email" Type="varchar" MaxLength="60" />
+    <Property Name="co_cta_ingr_egr" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="comentario" Type="varchar(max)" />
+    <Property Name="tipo_adi" Type="int" Nullable="false" />
+    <Property Name="matriz" Type="char" MaxLength="16" />
+    <Property Name="co_tab" Type="char" MaxLength="20" />
+    <Property Name="tipo_per" Type="char" MaxLength="1" />
+    <Property Name="co_pais" Type="char" MaxLength="6" />
+    <Property Name="ciudad" Type="varchar" MaxLength="50" />
+    <Property Name="zip" Type="varchar" MaxLength="10" />
+    <Property Name="website" Type="varchar" MaxLength="200" />
+    <Property Name="formtype" Type="char" MaxLength="30" />
+    <Property Name="taxid" Type="char" MaxLength="20" />
+    <Property Name="contribu_e" Type="bit" Nullable="false" />
+    <Property Name="rete_regis_doc" Type="bit" Nullable="false" />
+    <Property Name="porc_esp" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="email_alterno" Type="varchar" MaxLength="120" />
+    <Property Name="sujeto_obj_retenISLR_auto" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="saUnidad">
+    <Key>
+      <PropertyRef Name="co_uni" />
+    </Key>
+    <Property Name="co_uni" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="des_uni" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="campo1" Type="varchar" MaxLength="60" />
+    <Property Name="campo2" Type="varchar" MaxLength="60" />
+    <Property Name="campo3" Type="varchar" MaxLength="60" />
+    <Property Name="campo4" Type="varchar" MaxLength="60" />
+    <Property Name="campo5" Type="varchar" MaxLength="60" />
+    <Property Name="campo6" Type="varchar" MaxLength="60" />
+    <Property Name="campo7" Type="varchar" MaxLength="60" />
+    <Property Name="campo8" Type="varchar" MaxLength="60" />
+    <Property Name="co_us_in" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_in" Type="char" MaxLength="6" />
+    <Property Name="fe_us_in" Type="datetime" Nullable="false" />
+    <Property Name="co_us_mo" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="co_sucu_mo" Type="char" MaxLength="6" />
+    <Property Name="fe_us_mo" Type="datetime" Nullable="false" />
+    <Property Name="revisado" Type="char" MaxLength="1" />
+    <Property Name="trasnfe" Type="char" MaxLength="1" />
+    <Property Name="validador" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="rowguid" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_saArticulo_saProveedor">
+    <End Role="saProveedor" Type="Self.saProveedor" Multiplicity="0..1" />
+    <End Role="saArticulo" Type="Self.saArticulo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saArticulo">
+        <PropertyRef Name="reten_iva_tercero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saCliente_saClienteCasaMatriz">
+    <End Role="saCliente" Type="Self.saCliente" Multiplicity="0..1" />
+    <End Role="saCliente1" Type="Self.saCliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saCliente">
+        <PropertyRef Name="co_cli" />
+      </Principal>
+      <Dependent Role="saCliente1">
+        <PropertyRef Name="matriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saDocumentoCompra_saProveedor">
+    <End Role="saProveedor" Type="Self.saProveedor" Multiplicity="1" />
+    <End Role="saDocumentoCompra" Type="Self.saDocumentoCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saDocumentoCompra">
+        <PropertyRef Name="co_prov" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saDocumentoCompra_saProveedorTercero">
+    <End Role="saProveedor" Type="Self.saProveedor" Multiplicity="0..1" />
+    <End Role="saDocumentoCompra" Type="Self.saDocumentoCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saDocumentoCompra">
+        <PropertyRef Name="prov_ter" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saDocumentoVenta_saCliente">
+    <End Role="saCliente" Type="Self.saCliente" Multiplicity="1" />
+    <End Role="saDocumentoVenta" Type="Self.saDocumentoVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saCliente">
+        <PropertyRef Name="co_cli" />
+      </Principal>
+      <Dependent Role="saDocumentoVenta">
+        <PropertyRef Name="co_cli" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saFacturaCompra_saProveedor">
+    <End Role="saProveedor" Type="Self.saProveedor" Multiplicity="1" />
+    <End Role="saFacturaCompra" Type="Self.saFacturaCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saFacturaCompra">
+        <PropertyRef Name="co_prov" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saFacturaCompraReng_saFacturaCompra">
+    <End Role="saFacturaCompra" Type="Self.saFacturaCompra" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="saFacturaCompraReng" Type="Self.saFacturaCompraReng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saFacturaCompra">
+        <PropertyRef Name="doc_num" />
+      </Principal>
+      <Dependent Role="saFacturaCompraReng">
+        <PropertyRef Name="doc_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saFacturaVenta_saCliente">
+    <End Role="saCliente" Type="Self.saCliente" Multiplicity="1" />
+    <End Role="saFacturaVenta" Type="Self.saFacturaVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saCliente">
+        <PropertyRef Name="co_cli" />
+      </Principal>
+      <Dependent Role="saFacturaVenta">
+        <PropertyRef Name="co_cli" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saFacturaVentaReng_saFacturaVenta">
+    <End Role="saFacturaVenta" Type="Self.saFacturaVenta" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="saFacturaVentaReng" Type="Self.saFacturaVentaReng" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saFacturaVenta">
+        <PropertyRef Name="doc_num" />
+      </Principal>
+      <Dependent Role="saFacturaVentaReng">
+        <PropertyRef Name="doc_num" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_saProveedor_saProveedorCasaMatriz">
+    <End Role="saProveedor" Type="Self.saProveedor" Multiplicity="0..1" />
+    <End Role="saProveedor1" Type="Self.saProveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="saProveedor">
+        <PropertyRef Name="co_prov" />
+      </Principal>
+      <Dependent Role="saProveedor1">
+        <PropertyRef Name="matriz" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="pInsertarArticulo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sCo_Art" Type="char" Mode="In" />
+    <Parameter Name="sdFecha_Reg" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sArt_Des" Type="varchar" Mode="In" />
+    <Parameter Name="sTipo" Type="char" Mode="In" />
+    <Parameter Name="bAnulado" Type="bit" Mode="In" />
+    <Parameter Name="sdFecha_Inac" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sCo_Lin" Type="char" Mode="In" />
+    <Parameter Name="sCo_Subl" Type="char" Mode="In" />
+    <Parameter Name="sCo_Cat" Type="char" Mode="In" />
+    <Parameter Name="sCo_Color" Type="char" Mode="In" />
+    <Parameter Name="sCo_Ubicacion" Type="char" Mode="In" />
+    <Parameter Name="sItem" Type="varchar" Mode="In" />
+    <Parameter Name="sModelo" Type="varchar" Mode="In" />
+    <Parameter Name="sRef" Type="varchar" Mode="In" />
+    <Parameter Name="bGenerico" Type="bit" Mode="In" />
+    <Parameter Name="bManeja_Serial" Type="bit" Mode="In" />
+    <Parameter Name="bManeja_Lote" Type="bit" Mode="In" />
+    <Parameter Name="bManeja_Lote_Venc" Type="bit" Mode="In" />
+    <Parameter Name="deMargen_Min" Type="decimal" Mode="In" />
+    <Parameter Name="deMargen_Max" Type="decimal" Mode="In" />
+    <Parameter Name="sTipo_Imp" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp2" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp3" Type="char" Mode="In" />
+    <Parameter Name="sCo_Reten" Type="char" Mode="In" />
+    <Parameter Name="sCod_Proc" Type="char" Mode="In" />
+    <Parameter Name="sGarantia" Type="varchar" Mode="In" />
+    <Parameter Name="deVolumen" Type="decimal" Mode="In" />
+    <Parameter Name="dePeso" Type="decimal" Mode="In" />
+    <Parameter Name="deStock_Min" Type="decimal" Mode="In" />
+    <Parameter Name="deStock_Max" Type="decimal" Mode="In" />
+    <Parameter Name="deStock_Pedido" Type="decimal" Mode="In" />
+    <Parameter Name="iRelac_Unidad" Type="int" Mode="In" />
+    <Parameter Name="dePunt_Ven" Type="decimal" Mode="In" />
+    <Parameter Name="dePunt_Cli" Type="decimal" Mode="In" />
+    <Parameter Name="deLic_Mon_Ilc" Type="decimal" Mode="In" />
+    <Parameter Name="deLic_Capacidad" Type="decimal" Mode="In" />
+    <Parameter Name="deLic_Grado_Al" Type="decimal" Mode="In" />
+    <Parameter Name="sLic_Tipo" Type="char" Mode="In" />
+    <Parameter Name="bPrec_Om" Type="bit" Mode="In" />
+    <Parameter Name="sComentario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sTipo_Cos" Type="char" Mode="In" />
+    <Parameter Name="dePorc_Margen_Minimo" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Margen_Maximo" Type="decimal" Mode="In" />
+    <Parameter Name="deMont_Comi" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Arancel" Type="decimal" Mode="In" />
+    <Parameter Name="sI_Art_Des" Type="varchar" Mode="In" />
+    <Parameter Name="sDis_Cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sReten_Iva_Tercero" Type="char" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+  </Function>
+  <Function Name="pInsertarCliente" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sCo_Cli" Type="char" Mode="In" />
+    <Parameter Name="sLogin" Type="char" Mode="In" />
+    <Parameter Name="sPassword" Type="char" Mode="In" />
+    <Parameter Name="sSalesTax" Type="char" Mode="In" />
+    <Parameter Name="sCli_Des" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_seg" Type="char" Mode="In" />
+    <Parameter Name="sCo_zon" Type="char" Mode="In" />
+    <Parameter Name="sCo_Ven" Type="char" Mode="In" />
+    <Parameter Name="sEstado" Type="char" Mode="In" />
+    <Parameter Name="bInactivo" Type="bit" Mode="In" />
+    <Parameter Name="bValido" Type="bit" Mode="In" />
+    <Parameter Name="bSinCredito" Type="bit" Mode="In" />
+    <Parameter Name="bLunes" Type="bit" Mode="In" />
+    <Parameter Name="bMartes" Type="bit" Mode="In" />
+    <Parameter Name="bMiercoles" Type="bit" Mode="In" />
+    <Parameter Name="bJueves" Type="bit" Mode="In" />
+    <Parameter Name="bViernes" Type="bit" Mode="In" />
+    <Parameter Name="bSabado" Type="bit" Mode="In" />
+    <Parameter Name="bDomingo" Type="bit" Mode="In" />
+    <Parameter Name="sDirec1" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sDirec2" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sDir_Ent2" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sHorar_Caja" Type="varchar" Mode="In" />
+    <Parameter Name="sFrecu_Vist" Type="varchar" Mode="In" />
+    <Parameter Name="sTelefonos" Type="varchar" Mode="In" />
+    <Parameter Name="sFax" Type="varchar" Mode="In" />
+    <Parameter Name="sRespons" Type="varchar" Mode="In" />
+    <Parameter Name="sdFecha_reg" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sTip_Cli" Type="char" Mode="In" />
+    <Parameter Name="sSerialP" Type="char" Mode="In" />
+    <Parameter Name="iPuntaje" Type="int" Mode="In" />
+    <Parameter Name="iId" Type="int" Mode="In" />
+    <Parameter Name="deMont_cre" Type="decimal" Mode="In" />
+    <Parameter Name="sCo_mone" Type="char" Mode="In" />
+    <Parameter Name="sCond_Pag" Type="char" Mode="In" />
+    <Parameter Name="iPlaz_pag" Type="int" Mode="In" />
+    <Parameter Name="deDesc_ppago" Type="decimal" Mode="In" />
+    <Parameter Name="deDesc_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="sTipo_Iva" Type="char" Mode="In" />
+    <Parameter Name="deIva" Type="decimal" Mode="In" />
+    <Parameter Name="sRif" Type="varchar" Mode="In" />
+    <Parameter Name="bContrib" Type="bit" Mode="In" />
+    <Parameter Name="sDis_cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sNit" Type="varchar" Mode="In" />
+    <Parameter Name="sEmail" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Cta_Ingr_Egr" Type="char" Mode="In" />
+    <Parameter Name="sComentario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="bJuridico" Type="bit" Mode="In" />
+    <Parameter Name="iTipo_Adi" Type="int" Mode="In" />
+    <Parameter Name="sMatriz" Type="char" Mode="In" />
+    <Parameter Name="sCo_Tab" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Per" Type="char" Mode="In" />
+    <Parameter Name="sCo_pais" Type="char" Mode="In" />
+    <Parameter Name="sCiudad" Type="varchar" Mode="In" />
+    <Parameter Name="sZip" Type="varchar" Mode="In" />
+    <Parameter Name="sWebSite" Type="varchar" Mode="In" />
+    <Parameter Name="bContribu_E" Type="bit" Mode="In" />
+    <Parameter Name="bRete_Regis_Doc" Type="bit" Mode="In" />
+    <Parameter Name="dePorc_Esp" Type="decimal" Mode="In" />
+    <Parameter Name="sN_cr" Type="char" Mode="In" />
+    <Parameter Name="sN_db" Type="char" Mode="In" />
+    <Parameter Name="sTComp" Type="char" Mode="In" />
+    <Parameter Name="sEmail_alterno" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pInsertarDocumentoCompra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sCo_Tipo_Doc" Type="char" Mode="In" />
+    <Parameter Name="sNro_Doc" Type="char" Mode="In" />
+    <Parameter Name="sNro_Fact" Type="char" Mode="In" />
+    <Parameter Name="sCo_Mone" Type="char" Mode="In" />
+    <Parameter Name="sCo_Prov" Type="char" Mode="In" />
+    <Parameter Name="sCo_Cta_Ingr_Egr" Type="char" Mode="In" />
+    <Parameter Name="sDoc_Orig" Type="char" Mode="In" />
+    <Parameter Name="sMov_Ban" Type="char" Mode="In" />
+    <Parameter Name="sNro_Orig" Type="char" Mode="In" />
+    <Parameter Name="sNro_Che" Type="char" Mode="In" />
+    <Parameter Name="sPorc_Reca" Type="char" Mode="In" />
+    <Parameter Name="sPorc_Desc_Glob" Type="char" Mode="In" />
+    <Parameter Name="bAnulado" Type="bit" Mode="In" />
+    <Parameter Name="bAut" Type="bit" Mode="In" />
+    <Parameter Name="iPagar" Type="int" Mode="In" />
+    <Parameter Name="sObserva" Type="varchar" Mode="In" />
+    <Parameter Name="sTipo_Imp" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp2" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp3" Type="char" Mode="In" />
+    <Parameter Name="sdFec_Reg" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sdFec_Emis" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sdFec_Venc" Type="smalldatetime" Mode="In" />
+    <Parameter Name="deTotal_Neto" Type="decimal" Mode="In" />
+    <Parameter Name="deTasa" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Bruto" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Desc_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Reca" Type="decimal" Mode="In" />
+    <Parameter Name="deSaldo" Type="decimal" Mode="In" />
+    <Parameter Name="deAdicional" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros1" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros2" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros3" Type="decimal" Mode="In" />
+    <Parameter Name="sPro_Pago" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sSalestax" Type="char" Mode="In" />
+    <Parameter Name="sProv_Ter" Type="char" Mode="In" />
+    <Parameter Name="iReng_Ter" Type="int" Mode="In" />
+    <Parameter Name="iTipo_Origen" Type="int" Mode="In" />
+    <Parameter Name="sNum_Comprobante" Type="char" Mode="In" />
+    <Parameter Name="sDis_Cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sN_Control" Type="char" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+    <Parameter Name="sco_sucu_in" Type="char" Mode="In" />
+    <Parameter Name="sco_us_in" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+    <Parameter Name="bNac" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="pInsertarDocumentoVenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sCo_Tipo_Doc" Type="char" Mode="In" />
+    <Parameter Name="sNro_Doc" Type="char" Mode="In" />
+    <Parameter Name="sCo_Cli" Type="char" Mode="In" />
+    <Parameter Name="sCo_Ven" Type="char" Mode="In" />
+    <Parameter Name="sCo_Mone" Type="char" Mode="In" />
+    <Parameter Name="sMov_Ban" Type="char" Mode="In" />
+    <Parameter Name="sCo_Cta_Ingr_Egr" Type="char" Mode="In" />
+    <Parameter Name="deTasa" Type="decimal" Mode="In" />
+    <Parameter Name="sObserva" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sdFec_Reg" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sdFec_Emis" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sdFec_Venc" Type="smalldatetime" Mode="In" />
+    <Parameter Name="bAnulado" Type="bit" Mode="In" />
+    <Parameter Name="bAut" Type="bit" Mode="In" />
+    <Parameter Name="bContrib" Type="bit" Mode="In" />
+    <Parameter Name="sDoc_Orig" Type="char" Mode="In" />
+    <Parameter Name="sNro_Orig" Type="varchar" Mode="In" />
+    <Parameter Name="sNro_Che" Type="varchar" Mode="In" />
+    <Parameter Name="deMonto_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="deSaldo" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Bruto" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Desc_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="sPorc_Desc_Glob" Type="varchar" Mode="In" />
+    <Parameter Name="sPorc_Reca" Type="varchar" Mode="In" />
+    <Parameter Name="deMonto_Reca" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Neto" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="sTipo_Imp" Type="char" Mode="In" />
+    <Parameter Name="iTipo_Origen" Type="int" Mode="In" />
+    <Parameter Name="dePorc_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="sNum_Comprobante" Type="char" Mode="In" />
+    <Parameter Name="sN_Control" Type="varchar" Mode="In" />
+    <Parameter Name="sDis_Cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="deComis1" Type="decimal" Mode="In" />
+    <Parameter Name="deComis2" Type="decimal" Mode="In" />
+    <Parameter Name="deComis3" Type="decimal" Mode="In" />
+    <Parameter Name="deComis4" Type="decimal" Mode="In" />
+    <Parameter Name="deComis5" Type="decimal" Mode="In" />
+    <Parameter Name="deComis6" Type="decimal" Mode="In" />
+    <Parameter Name="deAdicional" Type="decimal" Mode="In" />
+    <Parameter Name="sSalestax" Type="char" Mode="In" />
+    <Parameter Name="bVen_Ter" Type="bit" Mode="In" />
+    <Parameter Name="sImpfis" Type="varchar" Mode="In" />
+    <Parameter Name="sImpfisfac" Type="varchar" Mode="In" />
+    <Parameter Name="sImp_nro_z" Type="char" Mode="In" />
+    <Parameter Name="deOtros1" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros2" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros3" Type="decimal" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pInsertarFacturaCompra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sDoc_Num" Type="char" Mode="In" />
+    <Parameter Name="sNro_Fact" Type="char" Mode="In" />
+    <Parameter Name="sDescrip" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Prov" Type="char" Mode="In" />
+    <Parameter Name="sCo_Cta_Ingr_Egr" Type="char" Mode="In" />
+    <Parameter Name="sCo_Mone" Type="char" Mode="In" />
+    <Parameter Name="sCo_Cond" Type="char" Mode="In" />
+    <Parameter Name="sN_Control" Type="varchar" Mode="In" />
+    <Parameter Name="sPorc_Desc_Glob" Type="varchar" Mode="In" />
+    <Parameter Name="sdFec_Emis" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sdFec_Venc" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sdFec_Reg" Type="smalldatetime" Mode="In" />
+    <Parameter Name="bAnulado" Type="bit" Mode="In" />
+    <Parameter Name="sStatus" Type="char" Mode="In" />
+    <Parameter Name="deTasa" Type="decimal" Mode="In" />
+    <Parameter Name="sPorc_Reca" Type="varchar" Mode="In" />
+    <Parameter Name="deSaldo" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Bruto" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Neto" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Desc_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Reca" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros1" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros2" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros3" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="sDir_Ent" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sComentario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="bImpresa" Type="bit" Mode="In" />
+    <Parameter Name="sSalestax" Type="char" Mode="In" />
+    <Parameter Name="sDis_Cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+    <Parameter Name="bNac" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="pInsertarFacturaVenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sDoc_Num" Type="char" Mode="In" />
+    <Parameter Name="sDescrip" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Cli" Type="char" Mode="In" />
+    <Parameter Name="sCo_Tran" Type="char" Mode="In" />
+    <Parameter Name="sCo_Mone" Type="char" Mode="In" />
+    <Parameter Name="sCo_Cta_Ingr_Egr" Type="char" Mode="In" />
+    <Parameter Name="sCo_Ven" Type="char" Mode="In" />
+    <Parameter Name="sCo_Cond" Type="char" Mode="In" />
+    <Parameter Name="sdFec_Emis" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sdFec_Venc" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sdFec_Reg" Type="smalldatetime" Mode="In" />
+    <Parameter Name="bAnulado" Type="bit" Mode="In" />
+    <Parameter Name="sStatus" Type="char" Mode="In" />
+    <Parameter Name="deTasa" Type="decimal" Mode="In" />
+    <Parameter Name="sN_Control" Type="varchar" Mode="In" />
+    <Parameter Name="sPorc_Desc_Glob" Type="varchar" Mode="In" />
+    <Parameter Name="deMonto_Desc_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="sPorc_Reca" Type="varchar" Mode="In" />
+    <Parameter Name="deMonto_Reca" Type="decimal" Mode="In" />
+    <Parameter Name="deSaldo" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Bruto" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros1" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros2" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros3" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Neto" Type="decimal" Mode="In" />
+    <Parameter Name="sDis_Cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sComentario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sDir_Ent" Type="varchar(max)" Mode="In" />
+    <Parameter Name="bContrib" Type="bit" Mode="In" />
+    <Parameter Name="bImpresa" Type="bit" Mode="In" />
+    <Parameter Name="sSalestax" Type="char" Mode="In" />
+    <Parameter Name="sImpfis" Type="varchar" Mode="In" />
+    <Parameter Name="sImpfisfac" Type="varchar" Mode="In" />
+    <Parameter Name="sImp_nro_z" Type="char" Mode="In" />
+    <Parameter Name="bVen_Ter" Type="bit" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pInsertarProveedor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sCo_Prov" Type="char" Mode="In" />
+    <Parameter Name="sProv_des" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_seg" Type="char" Mode="In" />
+    <Parameter Name="sCo_zon" Type="char" Mode="In" />
+    <Parameter Name="bInactivo" Type="bit" Mode="In" />
+    <Parameter Name="sDirec1" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sDirec2" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sTelefonos" Type="varchar" Mode="In" />
+    <Parameter Name="sFax" Type="varchar" Mode="In" />
+    <Parameter Name="sRespons" Type="varchar" Mode="In" />
+    <Parameter Name="sdFecha_reg" Type="smalldatetime" Mode="In" />
+    <Parameter Name="sTip_Pro" Type="char" Mode="In" />
+    <Parameter Name="deMont_cre" Type="decimal" Mode="In" />
+    <Parameter Name="sCo_Mone" Type="char" Mode="In" />
+    <Parameter Name="sCond_Pag" Type="char" Mode="In" />
+    <Parameter Name="iPlaz_pag" Type="int" Mode="In" />
+    <Parameter Name="deDesc_ppago" Type="decimal" Mode="In" />
+    <Parameter Name="deDesc_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="sRif" Type="varchar" Mode="In" />
+    <Parameter Name="bNacional" Type="bit" Mode="In" />
+    <Parameter Name="sDis_cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sNit" Type="varchar" Mode="In" />
+    <Parameter Name="sEmail" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Cta_Ingr_Egr" Type="char" Mode="In" />
+    <Parameter Name="sComentario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="iTipo_Adi" Type="int" Mode="In" />
+    <Parameter Name="sMatriz" Type="char" Mode="In" />
+    <Parameter Name="sCo_Tab" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Per" Type="char" Mode="In" />
+    <Parameter Name="sCo_pais" Type="char" Mode="In" />
+    <Parameter Name="sCiudad" Type="varchar" Mode="In" />
+    <Parameter Name="sZip" Type="varchar" Mode="In" />
+    <Parameter Name="sWebSite" Type="varchar" Mode="In" />
+    <Parameter Name="sFormType" Type="char" Mode="In" />
+    <Parameter Name="sTaxid" Type="char" Mode="In" />
+    <Parameter Name="bContribu_E" Type="bit" Mode="In" />
+    <Parameter Name="bRete_Regis_Doc" Type="bit" Mode="In" />
+    <Parameter Name="dePorc_Esp" Type="decimal" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+    <Parameter Name="sTgasto" Type="char" Mode="In" />
+    <Parameter Name="sTComp" Type="char" Mode="In" />
+    <Parameter Name="sEmail_alterno" Type="varchar" Mode="In" />
+    <Parameter Name="bSujeto_Obj_RetenISLR_Auto" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="pInsertarRenglonesFacturaCompra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iReng_Num" Type="int" Mode="In" />
+    <Parameter Name="sDoc_Num" Type="char" Mode="In" />
+    <Parameter Name="sCo_Art" Type="char" Mode="In" />
+    <Parameter Name="sDes_Art" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Uni" Type="char" Mode="In" />
+    <Parameter Name="sSCo_Uni" Type="char" Mode="In" />
+    <Parameter Name="sCo_Alma" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp2" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp3" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Doc" Type="char" Mode="In" />
+    <Parameter Name="sPorc_Desc" Type="char" Mode="In" />
+    <Parameter Name="sNum_Doc" Type="char" Mode="In" />
+    <Parameter Name="gRowGuid_Doc" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="deReng_Neto" Type="decimal" Mode="In" />
+    <Parameter Name="deCost_Unit" Type="decimal" Mode="In" />
+    <Parameter Name="deCost_Unit_OM" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Art" Type="decimal" Mode="In" />
+    <Parameter Name="deSTotal_Art" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Gas" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Dev" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Dev" Type="decimal" Mode="In" />
+    <Parameter Name="dePendiente2" Type="decimal" Mode="In" />
+    <Parameter Name="sComentario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="bLote_Asignado" Type="bit" Mode="In" />
+    <Parameter Name="deMonto_Desc_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_reca_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros1_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros2_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros3_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_imp_afec_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_imp2_afec_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_imp3_afec_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Desc" Type="decimal" Mode="In" />
+    <Parameter Name="dePendiente" Type="decimal" Mode="In" />
+    <Parameter Name="iReng_Doc" Type="int" Mode="In" />
+    <Parameter Name="sDis_Cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+    <Parameter Name="deCosto_Adi1" Type="decimal" Mode="In" />
+    <Parameter Name="deCosto_Adi2" Type="decimal" Mode="In" />
+    <Parameter Name="deCosto_Adi3" Type="decimal" Mode="In" />
+    <Parameter Name="sCredito_fiscal" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pInsertarRenglonesFacturaVenta" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iReng_Num" Type="int" Mode="In" />
+    <Parameter Name="sDoc_Num" Type="char" Mode="In" />
+    <Parameter Name="sCo_Art" Type="char" Mode="In" />
+    <Parameter Name="sDes_Art" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Uni" Type="char" Mode="In" />
+    <Parameter Name="sSco_Uni" Type="char" Mode="In" />
+    <Parameter Name="sCo_Alma" Type="char" Mode="In" />
+    <Parameter Name="sCo_Precio" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp2" Type="char" Mode="In" />
+    <Parameter Name="sTipo_Imp3" Type="char" Mode="In" />
+    <Parameter Name="deTotal_Art" Type="decimal" Mode="In" />
+    <Parameter Name="deSTotal_Art" Type="decimal" Mode="In" />
+    <Parameter Name="dePrec_Vta" Type="decimal" Mode="In" />
+    <Parameter Name="sPorc_Desc" Type="varchar" Mode="In" />
+    <Parameter Name="deMonto_Desc" Type="decimal" Mode="In" />
+    <Parameter Name="deReng_Neto" Type="decimal" Mode="In" />
+    <Parameter Name="dePendiente" Type="decimal" Mode="In" />
+    <Parameter Name="dePendiente2" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Desc_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_reca_Glob" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros1_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros2_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros3_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_imp_afec_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_imp2_afec_glob" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_imp3_afec_glob" Type="decimal" Mode="In" />
+    <Parameter Name="sTipo_Doc" Type="char" Mode="In" />
+    <Parameter Name="gRowguid_Doc" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="sNum_Doc" Type="varchar" Mode="In" />
+    <Parameter Name="dePorc_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="dePorc_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp2" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Imp3" Type="decimal" Mode="In" />
+    <Parameter Name="deOtros" Type="decimal" Mode="In" />
+    <Parameter Name="deTotal_Dev" Type="decimal" Mode="In" />
+    <Parameter Name="deMonto_Dev" Type="decimal" Mode="In" />
+    <Parameter Name="sComentario" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sDis_Cen" Type="varchar(max)" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sREVISADO" Type="char" Mode="In" />
+    <Parameter Name="sTRASNFE" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="pInsertarUnidad" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sCo_Uni" Type="char" Mode="In" />
+    <Parameter Name="sDes_Uni" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+  </Function>
+  <Function Name="pInsertarUnidadArticuloRenglon" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="sCo_Art" Type="char" Mode="In" />
+    <Parameter Name="sCo_Uni" Type="char" Mode="In" />
+    <Parameter Name="iReng_Num" Type="int" Mode="In" />
+    <Parameter Name="bRelacion" Type="bit" Mode="In" />
+    <Parameter Name="deEquivalencia" Type="decimal" Mode="In" />
+    <Parameter Name="bUso_Venta" Type="bit" Mode="In" />
+    <Parameter Name="bUso_Compra" Type="bit" Mode="In" />
+    <Parameter Name="bUni_Principal" Type="bit" Mode="In" />
+    <Parameter Name="bUso_Principal" Type="bit" Mode="In" />
+    <Parameter Name="bUni_Secundaria" Type="bit" Mode="In" />
+    <Parameter Name="bUso_Secundaria" Type="bit" Mode="In" />
+    <Parameter Name="bUso_NumDecimales" Type="bit" Mode="In" />
+    <Parameter Name="iNum_Decimales" Type="int" Mode="In" />
+    <Parameter Name="sCampo1" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo2" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo3" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo4" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo5" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo6" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo7" Type="varchar" Mode="In" />
+    <Parameter Name="sCampo8" Type="varchar" Mode="In" />
+    <Parameter Name="sCo_Us_In" Type="char" Mode="In" />
+    <Parameter Name="sCo_Sucu_In" Type="char" Mode="In" />
+    <Parameter Name="sMaquina" Type="varchar" Mode="In" />
+    <Parameter Name="sRevisado" Type="char" Mode="In" />
+    <Parameter Name="sTrasnfe" Type="char" Mode="In" />
+  </Function>
+  <EntityContainer Name="ProfitAdmModelStoreContainer">
+    <EntitySet Name="saArticulo" EntityType="Self.saArticulo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saCliente" EntityType="Self.saCliente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saDocumentoCompra" EntityType="Self.saDocumentoCompra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saDocumentoVenta" EntityType="Self.saDocumentoVenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saFacturaCompra" EntityType="Self.saFacturaCompra" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saFacturaCompraReng" EntityType="Self.saFacturaCompraReng" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saFacturaVenta" EntityType="Self.saFacturaVenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saFacturaVentaReng" EntityType="Self.saFacturaVentaReng" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saProveedor" EntityType="Self.saProveedor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="saUnidad" EntityType="Self.saUnidad" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_saArticulo_saProveedor" Association="Self.FK_saArticulo_saProveedor">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saArticulo" EntitySet="saArticulo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saCliente_saClienteCasaMatriz" Association="Self.FK_saCliente_saClienteCasaMatriz">
+      <End Role="saCliente" EntitySet="saCliente" />
+      <End Role="saCliente1" EntitySet="saCliente" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saDocumentoCompra_saProveedor" Association="Self.FK_saDocumentoCompra_saProveedor">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saDocumentoCompra" EntitySet="saDocumentoCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saDocumentoCompra_saProveedorTercero" Association="Self.FK_saDocumentoCompra_saProveedorTercero">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saDocumentoCompra" EntitySet="saDocumentoCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saDocumentoVenta_saCliente" Association="Self.FK_saDocumentoVenta_saCliente">
+      <End Role="saCliente" EntitySet="saCliente" />
+      <End Role="saDocumentoVenta" EntitySet="saDocumentoVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saFacturaCompra_saProveedor" Association="Self.FK_saFacturaCompra_saProveedor">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saFacturaCompra" EntitySet="saFacturaCompra" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saFacturaCompraReng_saFacturaCompra" Association="Self.FK_saFacturaCompraReng_saFacturaCompra">
+      <End Role="saFacturaCompra" EntitySet="saFacturaCompra" />
+      <End Role="saFacturaCompraReng" EntitySet="saFacturaCompraReng" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saFacturaVenta_saCliente" Association="Self.FK_saFacturaVenta_saCliente">
+      <End Role="saCliente" EntitySet="saCliente" />
+      <End Role="saFacturaVenta" EntitySet="saFacturaVenta" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saFacturaVentaReng_saFacturaVenta" Association="Self.FK_saFacturaVentaReng_saFacturaVenta">
+      <End Role="saFacturaVenta" EntitySet="saFacturaVenta" />
+      <End Role="saFacturaVentaReng" EntitySet="saFacturaVentaReng" />
+    </AssociationSet>
+    <AssociationSet Name="FK_saProveedor_saProveedorCasaMatriz" Association="Self.FK_saProveedor_saProveedorCasaMatriz">
+      <End Role="saProveedor" EntitySet="saProveedor" />
+      <End Role="saProveedor1" EntitySet="saProveedor" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

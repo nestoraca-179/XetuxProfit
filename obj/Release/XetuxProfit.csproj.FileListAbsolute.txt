@@ -1,0 +1,14 @@
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\XetuxProfit.exe.config
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\XetuxProfit.exe
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\XetuxProfit.pdb
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\EntityFramework.dll
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\EntityFramework.SqlServer.dll
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\Newtonsoft.Json.dll
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\EntityFramework.xml
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\EntityFramework.SqlServer.xml
+C:\Temp\ac\developer\c#\XetuxProfit\bin\Release\Newtonsoft.Json.xml
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Release\XetuxProfit.csproj.AssemblyReference.cache
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Release\XetuxProfit.csproj.CoreCompileInputs.cache
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Release\XetuxProfit.csproj.CopyComplete
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Release\XetuxProfit.exe
+C:\Temp\ac\developer\c#\XetuxProfit\obj\Release\XetuxProfit.pdb
