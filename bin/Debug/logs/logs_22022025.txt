@@ -1,0 +1,8 @@
+INFO [22/02/2025 11:11:13.603]: INICIO MIGRACION
+ERROR [22/02/2025 11:11:34.868]: Error al enviar la solicitud.
+   en System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   en System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   en XetuxProfit.Program.<Main>d__1.MoveNext() en C:\Temp\ac\developer\c#\XetuxProfit\Program.cs:línea 31
+INFO [22/02/2025 11:11:34.868]: FIN MIGRACION
+------------------------------------------------------------------------------------------------------------
