@@ -7,7 +7,7 @@ namespace XetuxProfit.Controller
 	{
 		public static void WriteLog(string type, string msg)
 		{
-			string file = $"logs\\logs_{DateTime.Now:ddMMyyyy}.txt";
+			string file = $"logs\\logs_{DateTime.Now:yyyyMMdd}.txt";
 
 			if (!Directory.Exists("logs"))
 				Directory.CreateDirectory("logs");

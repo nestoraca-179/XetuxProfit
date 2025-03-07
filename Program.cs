@@ -65,6 +65,12 @@ namespace XetuxProfit
                             if (!ProductController.Exists(r.product_code))
                                 ProductController.Add(r);
 
+                            if (r.product_sale_price == 0) // Ajuste para items con precio = 0
+								r.product_sale_price = Convert.ToDecimal(0.000001);
+
+                            if (r.product_net_price == 0) // Ajuste para items con precio = 0
+                                r.product_net_price = Convert.ToDecimal(0.000001);
+
                             // Verifico los montos del producto
                             skip = CheckAndLogPrice("Factura Venta", r.bill_id, r.product_code, r.quantity, "quantity          ") ||
                                    CheckAndLogPrice("Factura Venta", r.bill_id, r.product_code, r.product_sale_price, "product_sale_price") ||
